@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://biticyd8yfahk"]
+
+[node name="main" type="Node2D"]
+
+[node name="Room1" type="Node2D" parent="."]
+
+[node name="Room2" type="Node2D" parent="."]
+
+[node name="Room3" type="Node2D" parent="."]
