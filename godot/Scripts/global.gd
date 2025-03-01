@@ -1,11 +1,10 @@
 extends Node
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+var room1_has_scroll1 = false
+var room1_chest1_unlocked = false
+var room1_has_floor_scroll = false
+var room1_has_shelf_scroll = false
+var room1_has_both_scroll_parts = false
+var has_frank = false
+var has_beeswax = false
+var has_linen = false

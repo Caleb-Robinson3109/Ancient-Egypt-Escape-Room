@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2y6j8i3pb6mb"]
+
+[ext_resource type="Texture2D" uid="uid://dy0j6u1ve0xhy" path="res://Assets/Other Assets/unlock_chest1_room1_temp.png" id="1_72seo"]
+[ext_resource type="Script" path="res://Scripts/room1_chest1_unlock.gd" id="1_cpbnn"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_cpbnn")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("1_72seo")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="exti button" type="Button" parent="."]
+offset_left = 1109.0
+offset_top = 24.0
+offset_right = 1261.0
+offset_bottom = 137.0
+text = "Exit"
+
+[node name="unlock button" type="Button" parent="."]
+offset_left = 614.0
+offset_top = 527.0
+offset_right = 838.0
+offset_bottom = 646.0
+text = "Unlock
+"
+
+[node name="LineEdit_s" type="LineEdit" parent="."]
+offset_left = 255.0
+offset_top = 285.0
+offset_right = 445.0
+offset_bottom = 433.0
+max_length = 1
+
+[node name="LineEdit_l" type="LineEdit" parent="."]
+offset_left = 611.0
+offset_top = 294.0
+offset_right = 762.0
+offset_bottom = 439.0
+max_length = 1
+
+[node name="LineEdit_w" type="LineEdit" parent="."]
+offset_left = 857.0
+offset_top = 336.0
+offset_right = 957.0
+offset_bottom = 430.0
+max_length = 1
+
+[node name="LineEdit_f" type="LineEdit" parent="."]
+offset_left = 1025.0
+offset_top = 285.0
+offset_right = 1179.0
+offset_bottom = 445.0
+max_length = 1
+
+[connection signal="pressed" from="exti button" to="." method="_on_exti_button_pressed"]
+[connection signal="pressed" from="unlock button" to="." method="_on_unlock_button_pressed"]

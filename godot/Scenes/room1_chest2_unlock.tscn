@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://byljt12f0cbeb"]
+
+[ext_resource type="Script" path="res://Scripts/room1_chest2_unlock.gd" id="1_aolb3"]
+[ext_resource type="Texture2D" uid="uid://dy0j6u1ve0xhy" path="res://Assets/Other Assets/unlock_chest1_room1_temp.png" id="1_xncj5"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_aolb3")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_xncj5")
+
+[node name="exit" type="Button" parent="."]
+offset_left = 1030.0
+offset_top = 38.0
+offset_right = 1157.0
+offset_bottom = 143.0
+text = "exit"
+
+[node name="unlock" type="Button" parent="."]
+offset_left = 536.0
+offset_top = 542.0
+offset_right = 742.0
+offset_bottom = 643.0
+text = "unlock"
+
+[node name="LineEdit" type="LineEdit" parent="."]
+offset_left = 285.0
+offset_top = 285.0
+offset_right = 1122.0
+offset_bottom = 451.0
+
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="unlock" to="." method="_on_unlock_pressed"]

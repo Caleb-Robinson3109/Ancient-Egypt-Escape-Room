@@ -1,9 +1,282 @@
-[gd_scene format=3 uid="uid://biticyd8yfahk"]
+[gd_scene load_steps=17 format=3 uid="uid://baduux6f02c46"]
 
-[node name="main" type="Node2D"]
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_2w4k7"]
+[ext_resource type="Texture2D" uid="uid://c6qva3l7lfq33" path="res://Assets/Room1/room1_template.jpg" id="1_rhnlx"]
+[ext_resource type="Script" path="res://Scripts/room1_scroll1.gd" id="2_4bmf5"]
+[ext_resource type="Texture2D" uid="uid://dvgkvrmhk620h" path="res://Assets/Other Assets/test.png" id="3_6q350"]
+[ext_resource type="Script" path="res://Scripts/chest1_room1.gd" id="4_q64sd"]
+[ext_resource type="Texture2D" uid="uid://b1puy4mfix1ek" path="res://Assets/Other Assets/temp paper.png" id="4_t4m3y"]
+[ext_resource type="Script" path="res://Scripts/floor_board.gd" id="6_jjws6"]
+[ext_resource type="Script" path="res://Scripts/shelf_scroll.gd" id="7_mchhl"]
+[ext_resource type="Script" path="res://Scripts/room1_chest2_closed.gd" id="8_2r6eb"]
+[ext_resource type="Script" path="res://Scripts/linen.gd" id="9_rcbik"]
 
-[node name="Room1" type="Node2D" parent="."]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d7va3"]
+size = Vector2(268.384, 77.9688)
 
-[node name="Room2" type="Node2D" parent="."]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_427pk"]
+size = Vector2(177, 162)
 
-[node name="Room3" type="Node2D" parent="."]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b31p8"]
+size = Vector2(134, 79)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fblq2"]
+size = Vector2(55, 123.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hi2ay"]
+size = Vector2(164, 155)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cucog"]
+size = Vector2(89, 79)
+
+[node name="main" type="Node"]
+script = ExtResource("1_2w4k7")
+
+[node name="room1" type="Node2D" parent="."]
+position = Vector2(0, -1)
+
+[node name="background" type="TextureRect" parent="room1"]
+offset_right = 1819.0
+offset_bottom = 720.0
+texture = ExtResource("1_rhnlx")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="scroll1" type="Node2D" parent="room1"]
+position = Vector2(620.285, 600)
+rotation = -0.403171
+script = ExtResource("2_4bmf5")
+
+[node name="scroll1_texture" type="TextureRect" parent="room1/scroll1"]
+offset_left = -95.0
+offset_top = -12.0
+offset_right = 80.0
+offset_bottom = 22.0
+texture = ExtResource("3_6q350")
+
+[node name="Area2D" type="Area2D" parent="room1/scroll1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="room1/scroll1/Area2D"]
+position = Vector2(7.39545, 6.10254)
+shape = SubResource("RectangleShape2D_d7va3")
+
+[node name="chest1_closed" type="Node2D" parent="room1"]
+position = Vector2(105, 599)
+script = ExtResource("4_q64sd")
+
+[node name="TextureRect_closed" type="TextureRect" parent="room1/chest1_closed"]
+offset_left = -56.0
+offset_top = -72.0
+offset_right = 72.0
+offset_bottom = 51.0
+texture = ExtResource("3_6q350")
+
+[node name="Area2D" type="Area2D" parent="room1/chest1_closed"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="room1/chest1_closed/Area2D"]
+position = Vector2(7, -13)
+shape = SubResource("RectangleShape2D_427pk")
+
+[node name="chest1_open" type="Node2D" parent="room1"]
+visible = false
+position = Vector2(0, 1)
+
+[node name="TextureRect_open" type="TextureRect" parent="room1/chest1_open"]
+offset_left = 20.0
+offset_top = 569.0
+offset_right = 210.0
+offset_bottom = 630.0
+texture = ExtResource("3_6q350")
+
+[node name="floor_board" type="Node2D" parent="room1"]
+position = Vector2(315, 569)
+script = ExtResource("6_jjws6")
+
+[node name="floor scroll" type="TextureRect" parent="room1/floor_board"]
+offset_left = -6.0
+offset_top = -27.0
+offset_right = 19.0
+offset_bottom = 26.0
+texture = ExtResource("3_6q350")
+
+[node name="crack1" type="TextureRect" parent="room1/floor_board"]
+offset_left = -51.0
+offset_top = -41.0
+offset_right = 74.0
+offset_bottom = -12.0
+texture = ExtResource("3_6q350")
+
+[node name="crack2" type="TextureRect" parent="room1/floor_board"]
+offset_left = -60.0
+offset_top = -17.0
+offset_right = 75.0
+offset_bottom = 8.0
+texture = ExtResource("3_6q350")
+
+[node name="crack3" type="TextureRect" parent="room1/floor_board"]
+offset_left = -61.0
+offset_top = 3.0
+offset_right = 71.0
+offset_bottom = 30.0
+texture = ExtResource("3_6q350")
+
+[node name="Area2D" type="Area2D" parent="room1/floor_board"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="room1/floor_board/Area2D"]
+position = Vector2(8, -6)
+shape = SubResource("RectangleShape2D_b31p8")
+
+[node name="shelf_scroll" type="Node2D" parent="room1"]
+position = Vector2(34, 205)
+script = ExtResource("7_mchhl")
+
+[node name="TextureRect" type="TextureRect" parent="room1/shelf_scroll"]
+offset_left = -13.0
+offset_top = -34.0
+offset_right = 19.0
+offset_bottom = 50.0
+texture = ExtResource("3_6q350")
+
+[node name="Area2D" type="Area2D" parent="room1/shelf_scroll"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="room1/shelf_scroll/Area2D"]
+position = Vector2(11, 15.25)
+shape = SubResource("RectangleShape2D_fblq2")
+
+[node name="chest2_closed" type="Node2D" parent="room1"]
+position = Vector2(909, 462)
+script = ExtResource("8_2r6eb")
+
+[node name="TextureRect" type="TextureRect" parent="room1/chest2_closed"]
+offset_left = -65.0
+offset_top = -61.0
+offset_right = 63.0
+offset_bottom = 62.0
+texture = ExtResource("3_6q350")
+
+[node name="Area2D" type="Area2D" parent="room1/chest2_closed"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="room1/chest2_closed/Area2D"]
+position = Vector2(-3, 0.5)
+shape = SubResource("RectangleShape2D_hi2ay")
+
+[node name="chest2_open" type="Node2D" parent="room1"]
+visible = false
+position = Vector2(900, 466)
+
+[node name="TextureRect" type="TextureRect" parent="room1/chest2_open"]
+offset_left = -43.0
+offset_right = 87.0
+offset_bottom = 58.0
+texture = ExtResource("3_6q350")
+
+[node name="linen" type="Node2D" parent="room1"]
+position = Vector2(113, 338)
+script = ExtResource("9_rcbik")
+
+[node name="TextureRect" type="TextureRect" parent="room1/linen"]
+offset_right = 52.0
+offset_bottom = 57.0
+texture = ExtResource("3_6q350")
+
+[node name="Area2D" type="Area2D" parent="room1/linen"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="room1/linen/Area2D"]
+position = Vector2(34.5, 29.5)
+shape = SubResource("RectangleShape2D_cucog")
+
+[node name="room2" type="Node2D" parent="."]
+visible = false
+
+[node name="room3" type="Node2D" parent="."]
+visible = false
+
+[node name="inventory" type="Node2D" parent="."]
+
+[node name="room1_scroll1" type="Node2D" parent="inventory"]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="inventory/room1_scroll1"]
+offset_left = 173.0
+offset_top = 585.0
+offset_right = 273.0
+offset_bottom = 785.0
+texture = ExtResource("4_t4m3y")
+
+[node name="salt" type="Node2D" parent="inventory"]
+visible = false
+position = Vector2(340, 644)
+
+[node name="TextureRect" type="TextureRect" parent="inventory/salt"]
+offset_left = -40.0
+offset_top = -43.0
+offset_right = 60.0
+offset_bottom = 157.0
+texture = ExtResource("4_t4m3y")
+
+[node name="room1_scroll2_floor" type="Node2D" parent="inventory"]
+visible = false
+
+[node name="floor" type="TextureRect" parent="inventory/room1_scroll2_floor"]
+offset_left = 324.0
+offset_top = 680.0
+offset_right = 424.0
+offset_bottom = 880.0
+texture = ExtResource("4_t4m3y")
+
+[node name="room1_scroll2_shelf" type="Node2D" parent="inventory"]
+visible = false
+
+[node name="shelf" type="TextureRect" parent="inventory/room1_scroll2_shelf"]
+offset_left = 321.0
+offset_top = 640.0
+offset_right = 421.0
+offset_bottom = 690.0
+texture = ExtResource("4_t4m3y")
+expand_mode = 1
+
+[node name="frank" type="Node2D" parent="inventory"]
+visible = false
+position = Vector2(500, 718.285)
+
+[node name="TextureRect" type="TextureRect" parent="inventory/frank"]
+offset_left = -50.0
+offset_top = -62.285
+offset_right = 50.0
+offset_bottom = 137.715
+texture = ExtResource("4_t4m3y")
+
+[node name="beeswax" type="Node2D" parent="inventory"]
+visible = false
+position = Vector2(669, 688)
+
+[node name="TextureRect" type="TextureRect" parent="inventory/beeswax"]
+offset_left = -17.0
+offset_top = -26.0
+offset_right = 83.0
+offset_bottom = 174.0
+texture = ExtResource("4_t4m3y")
+
+[node name="linen" type="Node2D" parent="inventory"]
+visible = false
+position = Vector2(876, 676)
+
+[node name="TextureRect" type="TextureRect" parent="inventory/linen"]
+offset_left = -5.0
+offset_top = -26.0
+offset_right = 95.0
+offset_bottom = 174.0
+texture = ExtResource("4_t4m3y")
+
+[connection signal="mouse_entered" from="room1/scroll1/Area2D" to="room1/scroll1" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="room1/scroll1/Area2D" to="room1/scroll1" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="room1/chest1_closed/Area2D" to="room1/chest1_closed" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="room1/chest1_closed/Area2D" to="room1/chest1_closed" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="room1/floor_board/Area2D" to="room1/floor_board" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="room1/floor_board/Area2D" to="room1/floor_board" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="room1/shelf_scroll/Area2D" to="room1/shelf_scroll" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="room1/shelf_scroll/Area2D" to="room1/shelf_scroll" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="room1/chest2_closed/Area2D" to="room1/chest2_closed" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="room1/chest2_closed/Area2D" to="room1/chest2_closed" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="room1/linen/Area2D" to="room1/linen" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="room1/linen/Area2D" to="room1/linen" method="_on_area_2d_mouse_exited"]
