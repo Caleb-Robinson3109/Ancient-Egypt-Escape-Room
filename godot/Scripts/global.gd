@@ -13,3 +13,7 @@ var stachue1: String = ""
 var stachue2: String = ""
 var stachue3: String = ""
 var stachue4: String = ""
+
+var complete_stat = false
+var has_skey = false
+var unlock_door = false

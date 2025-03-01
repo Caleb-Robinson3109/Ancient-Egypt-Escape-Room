@@ -9,10 +9,8 @@ extends Node2D
 @onready var frank_tex = $frank
 @onready var bee_tex = $bee
 @onready var linen_tex = $linen
-
 @export var mouse: bool = false
 var bigger: bool = true
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -22,19 +20,19 @@ func _input(event):
 		if(mouse):
 			#hand
 			if(inventory.i == 0):
-				if(Global.stachue1 == ""):
+				if(Global.stachue3 == ""):
 					pass
 				else:
-					if(Global.stachue1 == "salt"):
+					if(Global.stachue3 == "salt"):
 						salt_tex.visible = false
 						salt_inv.visible = true
-					elif(Global.stachue1 == "frank"):
+					elif(Global.stachue3 == "frank"):
 						frank_tex.visible = false
 						frank.visible = true
-					elif(Global.stachue1 == "beeswax"):
+					elif(Global.stachue3 == "beeswax"):
 						bee_tex.visible = false
 						beeswax.visible = true
-					elif(Global.stachue1 == "linen"):
+					elif(Global.stachue3 == "linen"):
 						linen_tex.visible = false
 						linen.visible = true
 			#salt
@@ -46,7 +44,7 @@ func _input(event):
 				inventory.inv[0].scale.x = 1.2
 				inventory.inv[0].scale.y = 1.2
 				inventory.i = 0
-				Global.stachue1 = "salt"
+				Global.stachue3 = "salt"
 			#frank bee lin
 			elif(inventory.i == 5):
 				frank_tex.visible = true
@@ -56,7 +54,7 @@ func _input(event):
 				inventory.inv[0].scale.x = 1.2
 				inventory.inv[0].scale.y = 1.2
 				inventory.i = 0
-				Global.stachue1 = "frank"
+				Global.stachue3 = "frank"
 			elif(inventory.i == 6):
 				bee_tex.visible = true
 				beeswax.visible = false
@@ -65,7 +63,7 @@ func _input(event):
 				inventory.inv[0].scale.x = 1.2
 				inventory.inv[0].scale.y = 1.2
 				inventory.i = 0
-				Global.stachue1 = "beeswax"
+				Global.stachue3 = "beeswax"
 			elif(inventory.i == 7):
 				linen_tex.visible = true
 				linen.visible = false
@@ -74,9 +72,7 @@ func _input(event):
 				inventory.inv[0].scale.x = 1.2
 				inventory.inv[0].scale.y = 1.2
 				inventory.i = 0
-				Global.stachue1 = "linen"
-			
-			
+				Global.stachue3 = "linen"
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass

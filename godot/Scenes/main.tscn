@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://baduux6f02c46"]
+[gd_scene load_steps=31 format=3 uid="uid://baduux6f02c46"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_2w4k7"]
 [ext_resource type="Texture2D" uid="uid://c6qva3l7lfq33" path="res://Assets/Room1/room1_template.jpg" id="1_rhnlx"]
@@ -12,7 +12,12 @@
 [ext_resource type="Script" path="res://Scripts/linen.gd" id="9_rcbik"]
 [ext_resource type="Script" path="res://Scripts/salt_wall.gd" id="10_2pgfc"]
 [ext_resource type="Script" path="res://Scripts/inventory.gd" id="10_v5uqr"]
+[ext_resource type="Script" path="res://Scripts/stat2.gd" id="11_bddum"]
 [ext_resource type="Texture2D" uid="uid://eevvf1ark7a2" path="res://Assets/Other Assets/temp_hand.png" id="11_lww6h"]
+[ext_resource type="Script" path="res://Scripts/stat3.gd" id="12_tf8ql"]
+[ext_resource type="Script" path="res://Scripts/stat4.gd" id="13_wewro"]
+[ext_resource type="Script" path="res://Scripts/scarcoph_key.gd" id="14_u7ex4"]
+[ext_resource type="Script" path="res://Scripts/door.gd" id="15_g2fik"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d7va3"]
 size = Vector2(268.384, 77.9688)
@@ -43,6 +48,12 @@ size = Vector2(88, 147)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b2f0l"]
 size = Vector2(86, 157)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2mp7k"]
+size = Vector2(162, 366)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dx6mg"]
+size = Vector2(143, 485)
 
 [node name="main" type="Node"]
 script = ExtResource("1_2w4k7")
@@ -204,12 +215,30 @@ shape = SubResource("RectangleShape2D_cucog")
 position = Vector2(298, 226)
 script = ExtResource("10_2pgfc")
 
-[node name="TextureRect" type="TextureRect" parent="room1/stat1"]
+[node name="salt" type="TextureRect" parent="room1/stat1"]
 visible = false
 offset_left = -33.0
 offset_top = -24.0
 offset_right = 33.0
 offset_bottom = 49.0
+texture = ExtResource("3_6q350")
+
+[node name="frank" type="TextureRect" parent="room1/stat1"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_6q350")
+
+[node name="bee" type="TextureRect" parent="room1/stat1"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_6q350")
+
+[node name="linen" type="TextureRect" parent="room1/stat1"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
 texture = ExtResource("3_6q350")
 
 [node name="Area2D" type="Area2D" parent="room1/stat1"]
@@ -218,54 +247,169 @@ texture = ExtResource("3_6q350")
 position = Vector2(5, 13)
 shape = SubResource("RectangleShape2D_gffxr")
 
-[node name="frank" type="Node2D" parent="room1"]
+[node name="stat2" type="Node2D" parent="room1"]
 position = Vector2(445, 229)
+script = ExtResource("11_bddum")
 
-[node name="TextureRect" type="TextureRect" parent="room1/frank"]
-visible = false
-offset_left = -22.0
-offset_top = -14.0
-offset_right = 30.0
-offset_bottom = 50.0
-texture = ExtResource("3_6q350")
+[node name="Area2D" type="Area2D" parent="room1/stat2"]
 
-[node name="Area2D" type="Area2D" parent="room1/frank"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="room1/frank/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="room1/stat2/Area2D"]
 position = Vector2(0.5, 4)
 shape = SubResource("RectangleShape2D_nk7d0")
 
-[node name="beeswax" type="Node2D" parent="room1"]
-position = Vector2(964, 231)
-
-[node name="TextureRect" type="TextureRect" parent="room1/beeswax"]
+[node name="salt" type="TextureRect" parent="room1/stat2"]
 visible = false
-offset_left = -24.0
-offset_top = -21.0
-offset_right = 23.0
-offset_bottom = 40.0
+offset_left = -33.0
+offset_top = -24.0
+offset_right = 33.0
+offset_bottom = 49.0
 texture = ExtResource("3_6q350")
 
-[node name="Area2D" type="Area2D" parent="room1/beeswax"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="room1/beeswax/Area2D"]
-position = Vector2(-12, -2.5)
-shape = SubResource("RectangleShape2D_sgp0k")
-
-[node name="linen_wall" type="Node2D" parent="room1"]
-position = Vector2(819, 243)
-
-[node name="TextureRect" type="TextureRect" parent="room1/linen_wall"]
+[node name="frank" type="TextureRect" parent="room1/stat2"]
 visible = false
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("3_6q350")
 
-[node name="Area2D" type="Area2D" parent="room1/linen_wall"]
+[node name="bee" type="TextureRect" parent="room1/stat2"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_6q350")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="room1/linen_wall/Area2D"]
+[node name="linen" type="TextureRect" parent="room1/stat2"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_6q350")
+
+[node name="stat3" type="Node2D" parent="room1"]
+position = Vector2(964, 231)
+script = ExtResource("12_tf8ql")
+
+[node name="Area2D" type="Area2D" parent="room1/stat3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="room1/stat3/Area2D"]
+position = Vector2(-12, -2.5)
+shape = SubResource("RectangleShape2D_sgp0k")
+
+[node name="salt" type="TextureRect" parent="room1/stat3"]
+visible = false
+offset_left = -33.0
+offset_top = -24.0
+offset_right = 33.0
+offset_bottom = 49.0
+texture = ExtResource("3_6q350")
+
+[node name="frank" type="TextureRect" parent="room1/stat3"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_6q350")
+
+[node name="bee" type="TextureRect" parent="room1/stat3"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_6q350")
+
+[node name="linen" type="TextureRect" parent="room1/stat3"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_6q350")
+
+[node name="stat4" type="Node2D" parent="room1"]
+position = Vector2(819, 243)
+script = ExtResource("13_wewro")
+
+[node name="Area2D" type="Area2D" parent="room1/stat4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="room1/stat4/Area2D"]
 position = Vector2(-1, -12.5)
 shape = SubResource("RectangleShape2D_b2f0l")
+
+[node name="salt" type="TextureRect" parent="room1/stat4"]
+visible = false
+offset_left = -33.0
+offset_top = -24.0
+offset_right = 33.0
+offset_bottom = 49.0
+texture = ExtResource("3_6q350")
+
+[node name="frank" type="TextureRect" parent="room1/stat4"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_6q350")
+
+[node name="bee" type="TextureRect" parent="room1/stat4"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_6q350")
+
+[node name="linen" type="TextureRect" parent="room1/stat4"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_6q350")
+
+[node name="scarcoph_closed" type="Node2D" parent="room1"]
+position = Vector2(640, 350)
+
+[node name="TextureRect" type="TextureRect" parent="room1/scarcoph_closed"]
+offset_left = -67.0
+offset_top = -214.0
+offset_right = 78.0
+offset_bottom = 161.0
+texture = ExtResource("3_6q350")
+
+[node name="scarcoph_open" type="Node2D" parent="room1"]
+visible = false
+position = Vector2(659, 348)
+
+[node name="TextureRect" type="TextureRect" parent="room1/scarcoph_open"]
+offset_left = -93.0
+offset_top = -171.0
+offset_right = -53.0
+offset_bottom = 154.0
+texture = ExtResource("3_6q350")
+
+[node name="scarcoph_key" type="Node2D" parent="room1"]
+visible = false
+position = Vector2(640, 372)
+script = ExtResource("14_u7ex4")
+
+[node name="TextureRect" type="TextureRect" parent="room1/scarcoph_key"]
+offset_left = 12.0
+offset_top = -19.0
+offset_right = 69.0
+offset_bottom = 26.0
+texture = ExtResource("3_6q350")
+
+[node name="Area2D" type="Area2D" parent="room1/scarcoph_key"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="room1/scarcoph_key/Area2D"]
+position = Vector2(14, -58)
+shape = SubResource("RectangleShape2D_2mp7k")
+
+[node name="door" type="Node2D" parent="room1"]
+position = Vector2(1159, 393)
+script = ExtResource("15_g2fik")
+
+[node name="TextureRect" type="TextureRect" parent="room1/door"]
+offset_left = -48.0
+offset_top = -264.0
+offset_right = 63.0
+offset_bottom = 189.0
+texture = ExtResource("3_6q350")
+
+[node name="Area2D" type="Area2D" parent="room1/door"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="room1/door/Area2D"]
+position = Vector2(3.5, -45.5)
+shape = SubResource("RectangleShape2D_dx6mg")
 
 [node name="room2" type="Node2D" parent="."]
 visible = false
@@ -362,6 +506,16 @@ offset_right = 95.0
 offset_bottom = 174.0
 texture = ExtResource("4_t4m3y")
 
+[node name="key" type="Node2D" parent="inventory"]
+visible = false
+position = Vector2(947, 659)
+
+[node name="TextureRect" type="TextureRect" parent="inventory/key"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_t4m3y")
+expand_mode = 1
+
 [connection signal="mouse_entered" from="room1/scroll1/Area2D" to="room1/scroll1" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="room1/scroll1/Area2D" to="room1/scroll1" method="_on_area_2d_mouse_exited"]
 [connection signal="mouse_entered" from="room1/chest1_closed/Area2D" to="room1/chest1_closed" method="_on_area_2d_mouse_entered"]
@@ -376,3 +530,13 @@ texture = ExtResource("4_t4m3y")
 [connection signal="mouse_exited" from="room1/linen/Area2D" to="room1/linen" method="_on_area_2d_mouse_exited"]
 [connection signal="mouse_entered" from="room1/stat1/Area2D" to="room1/stat1" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="room1/stat1/Area2D" to="room1/stat1" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="room1/stat2/Area2D" to="room1/stat2" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="room1/stat2/Area2D" to="room1/stat2" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="room1/stat3/Area2D" to="room1/stat3" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="room1/stat3/Area2D" to="room1/stat3" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="room1/stat4/Area2D" to="room1/stat4" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="room1/stat4/Area2D" to="room1/stat4" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="room1/scarcoph_key/Area2D" to="room1/scarcoph_key" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="room1/scarcoph_key/Area2D" to="room1/scarcoph_key" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="room1/door/Area2D" to="room1/door" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="room1/door/Area2D" to="room1/door" method="_on_area_2d_mouse_exited"]

@@ -27,8 +27,22 @@ extends Node
 @onready var linen = $room1/linen
 @onready var linen_inv = $inventory/linen
 
+#complete stachue
+@onready var key = $inventory/key
+@onready var salt_stat = $room1/stat1/salt
+@onready var linen_stat = $room1/stat2/linen
+@onready var bee_stat = $room1/stat2/bee
+@onready var frank_stat = $room1/stat2/frank
+@onready var scarcoph_closed = $room1/scarcoph_closed
+@onready var scarcoph_open = $room1/scarcoph_open
+@onready var scarcoph_key = $room1/scarcoph_key
 
+#gets key
+#scarcoph_key
+@onready var skey = $inventory/key
 
+#unlocked door
+#skey
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -53,8 +67,24 @@ func _ready():
 	if(Global.has_linen):
 		linen.visible = false
 		linen_inv.visible = true
-
+	if(Global.complete_stat):
+		scarcoph_closed.visible = false
+		scarcoph_open.visible = true
+		scarcoph_key.visible = true
+	if(Global.has_skey):
+		skey.visible = true
+		scarcoph_key.visible = false
+	if(Global.unlock_door):
+		skey.visible = false
+		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if(Global.complete_stat == false):
+		#if(Global.stachue1 == "salt" && Global.stachue2 == "linen" && Global.stachue3 == "beeswax" && Global.stachue4 == "frank"):
+		if(true):
+			Global.complete_stat = true
+			scarcoph_closed.visible = false
+			scarcoph_open.visible = true
+			scarcoph_key.visible = true
+			
