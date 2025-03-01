@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://baduux6f02c46"]
+[gd_scene load_steps=24 format=3 uid="uid://baduux6f02c46"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_2w4k7"]
 [ext_resource type="Texture2D" uid="uid://c6qva3l7lfq33" path="res://Assets/Room1/room1_template.jpg" id="1_rhnlx"]
@@ -10,6 +10,9 @@
 [ext_resource type="Script" path="res://Scripts/shelf_scroll.gd" id="7_mchhl"]
 [ext_resource type="Script" path="res://Scripts/room1_chest2_closed.gd" id="8_2r6eb"]
 [ext_resource type="Script" path="res://Scripts/linen.gd" id="9_rcbik"]
+[ext_resource type="Script" path="res://Scripts/salt_wall.gd" id="10_2pgfc"]
+[ext_resource type="Script" path="res://Scripts/inventory.gd" id="10_v5uqr"]
+[ext_resource type="Texture2D" uid="uid://eevvf1ark7a2" path="res://Assets/Other Assets/temp_hand.png" id="11_lww6h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d7va3"]
 size = Vector2(268.384, 77.9688)
@@ -28,6 +31,18 @@ size = Vector2(164, 155)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cucog"]
 size = Vector2(89, 79)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gffxr"]
+size = Vector2(88, 136)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nk7d0"]
+size = Vector2(79, 152)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sgp0k"]
+size = Vector2(88, 147)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b2f0l"]
+size = Vector2(86, 157)
 
 [node name="main" type="Node"]
 script = ExtResource("1_2w4k7")
@@ -185,6 +200,73 @@ texture = ExtResource("3_6q350")
 position = Vector2(34.5, 29.5)
 shape = SubResource("RectangleShape2D_cucog")
 
+[node name="stat1" type="Node2D" parent="room1"]
+position = Vector2(298, 226)
+script = ExtResource("10_2pgfc")
+
+[node name="TextureRect" type="TextureRect" parent="room1/stat1"]
+visible = false
+offset_left = -33.0
+offset_top = -24.0
+offset_right = 33.0
+offset_bottom = 49.0
+texture = ExtResource("3_6q350")
+
+[node name="Area2D" type="Area2D" parent="room1/stat1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="room1/stat1/Area2D"]
+position = Vector2(5, 13)
+shape = SubResource("RectangleShape2D_gffxr")
+
+[node name="frank" type="Node2D" parent="room1"]
+position = Vector2(445, 229)
+
+[node name="TextureRect" type="TextureRect" parent="room1/frank"]
+visible = false
+offset_left = -22.0
+offset_top = -14.0
+offset_right = 30.0
+offset_bottom = 50.0
+texture = ExtResource("3_6q350")
+
+[node name="Area2D" type="Area2D" parent="room1/frank"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="room1/frank/Area2D"]
+position = Vector2(0.5, 4)
+shape = SubResource("RectangleShape2D_nk7d0")
+
+[node name="beeswax" type="Node2D" parent="room1"]
+position = Vector2(964, 231)
+
+[node name="TextureRect" type="TextureRect" parent="room1/beeswax"]
+visible = false
+offset_left = -24.0
+offset_top = -21.0
+offset_right = 23.0
+offset_bottom = 40.0
+texture = ExtResource("3_6q350")
+
+[node name="Area2D" type="Area2D" parent="room1/beeswax"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="room1/beeswax/Area2D"]
+position = Vector2(-12, -2.5)
+shape = SubResource("RectangleShape2D_sgp0k")
+
+[node name="linen_wall" type="Node2D" parent="room1"]
+position = Vector2(819, 243)
+
+[node name="TextureRect" type="TextureRect" parent="room1/linen_wall"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_6q350")
+
+[node name="Area2D" type="Area2D" parent="room1/linen_wall"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="room1/linen_wall/Area2D"]
+position = Vector2(-1, -12.5)
+shape = SubResource("RectangleShape2D_b2f0l")
+
 [node name="room2" type="Node2D" parent="."]
 visible = false
 
@@ -192,6 +274,17 @@ visible = false
 visible = false
 
 [node name="inventory" type="Node2D" parent="."]
+script = ExtResource("10_v5uqr")
+
+[node name="hand" type="Node2D" parent="inventory"]
+position = Vector2(1206, 676)
+
+[node name="TextureRect" type="TextureRect" parent="inventory/hand"]
+offset_left = -59.0
+offset_top = -71.0
+offset_right = 41.0
+offset_bottom = 29.0
+texture = ExtResource("11_lww6h")
 
 [node name="room1_scroll1" type="Node2D" parent="inventory"]
 visible = false
@@ -208,11 +301,12 @@ visible = false
 position = Vector2(340, 644)
 
 [node name="TextureRect" type="TextureRect" parent="inventory/salt"]
-offset_left = -40.0
-offset_top = -43.0
-offset_right = 60.0
-offset_bottom = 157.0
+offset_left = -52.0
+offset_top = -24.0
+offset_right = 43.0
+offset_bottom = 39.0
 texture = ExtResource("4_t4m3y")
+expand_mode = 1
 
 [node name="room1_scroll2_floor" type="Node2D" parent="inventory"]
 visible = false
@@ -280,3 +374,5 @@ texture = ExtResource("4_t4m3y")
 [connection signal="mouse_exited" from="room1/chest2_closed/Area2D" to="room1/chest2_closed" method="_on_area_2d_mouse_exited"]
 [connection signal="mouse_entered" from="room1/linen/Area2D" to="room1/linen" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="room1/linen/Area2D" to="room1/linen" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="room1/stat1/Area2D" to="room1/stat1" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="room1/stat1/Area2D" to="room1/stat1" method="_on_area_2d_mouse_exited"]
