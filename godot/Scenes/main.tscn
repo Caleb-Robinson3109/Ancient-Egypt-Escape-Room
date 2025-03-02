@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=3 uid="uid://baduux6f02c46"]
+[gd_scene load_steps=78 format=3 uid="uid://baduux6f02c46"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_2w4k7"]
 [ext_resource type="Script" path="res://Scripts/room1_scroll1.gd" id="2_4bmf5"]
@@ -40,15 +40,21 @@
 [ext_resource type="Texture2D" uid="uid://dkqsfrlvmidrw" path="res://Assets/Room2/Untitled_Artwork 20.png" id="25_v40au"]
 [ext_resource type="Script" path="res://Scripts/hyro3.gd" id="26_hbu1m"]
 [ext_resource type="Script" path="res://Scripts/hyro_feather.gd" id="28_gw668"]
+[ext_resource type="Script" path="res://Scripts/organ.gd" id="28_hbwyi"]
+[ext_resource type="Texture2D" uid="uid://be1jsgdbl8eyt" path="res://Assets/Room1/Untitled_Artwork 6.png" id="29_jyqjp"]
 [ext_resource type="Texture2D" uid="uid://ccro5225ph1pb" path="res://Assets/Room1/Untitled_Artwork 15.png" id="30_8xal5"]
+[ext_resource type="Texture2D" uid="uid://djjoesua50hm6" path="res://Assets/Room1/Untitled_Artwork 7.png" id="30_d1i1f"]
 [ext_resource type="Script" path="res://Scripts/door1.gd" id="30_hkx8r"]
 [ext_resource type="Texture2D" uid="uid://bnofthcmck11q" path="res://Assets/Room1/Untitled_Artwork 4.png" id="31_4hpl8"]
+[ext_resource type="Texture2D" uid="uid://cynbpbe551she" path="res://Assets/Room1/Untitled_Artwork 8.png" id="31_4vu8g"]
+[ext_resource type="Texture2D" uid="uid://dj7pse54r75yj" path="res://Assets/Room1/Untitled_Artwork 9.png" id="32_6i6x7"]
 [ext_resource type="Script" path="res://Scripts/door2.gd" id="32_q5sav"]
 [ext_resource type="Texture2D" uid="uid://dscsj1y4obk0d" path="res://Assets/Room3/Untitled_Artwork 24.png" id="33_i73e3"]
 [ext_resource type="Script" path="res://Scripts/door_3.gd" id="34_kognu"]
 [ext_resource type="Texture2D" uid="uid://b204opd3n2prc" path="res://Assets/Room2/Untitled_Artwork 25.png" id="34_srims"]
 [ext_resource type="Script" path="res://Scripts/scroll.gd" id="35_66ar2"]
 [ext_resource type="Texture2D" uid="uid://bsvak2m328ilr" path="res://Assets/Room1/Untitled_Artwork 5.png" id="36_hoel8"]
+[ext_resource type="Script" path="res://Scripts/scale.gd" id="52_q2oox"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d7va3"]
 size = Vector2(189.431, 61.4319)
@@ -109,7 +115,7 @@ size = Vector2(74, 114)
 size = Vector2(146, 471)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lvb0s"]
-size = Vector2(117.461, 500.025)
+size = Vector2(97.7612, 397.785)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i4hje"]
 size = Vector2(119.24, 466.909)
@@ -553,6 +559,57 @@ texture = ExtResource("31_4hpl8")
 position = Vector2(3.5, -45.5)
 shape = SubResource("RectangleShape2D_dx6mg")
 
+[node name="organ" type="Node2D" parent="room1"]
+position = Vector2(129, 172)
+rotation = 0.0872665
+script = ExtResource("28_hbwyi")
+
+[node name="crack0" type="TextureRect" parent="room1/organ"]
+offset_left = -94.0
+offset_top = -161.0
+offset_right = 114.0
+offset_bottom = 49.0
+texture = ExtResource("29_jyqjp")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="crack1" type="TextureRect" parent="room1/organ"]
+visible = false
+offset_left = -96.0
+offset_top = -162.0
+offset_right = 161.0
+offset_bottom = 51.0
+texture = ExtResource("30_d1i1f")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="crack2" type="TextureRect" parent="room1/organ"]
+visible = false
+offset_left = -94.5121
+offset_top = -162.381
+offset_right = 165.488
+offset_bottom = 48.6194
+texture = ExtResource("31_4vu8g")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="heart" type="TextureRect" parent="room1/organ"]
+visible = false
+offset_left = -40.7559
+offset_top = -75.7361
+offset_right = 66.2441
+offset_bottom = 13.2639
+texture = ExtResource("32_6i6x7")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Button" type="Button" parent="room1/organ"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -43.0
+offset_top = -158.0
+offset_right = 54.0
+offset_bottom = 33.0
+
 [node name="room2" type="Node2D" parent="."]
 visible = false
 
@@ -729,10 +786,18 @@ offset_right = 87.0
 offset_bottom = 441.0
 texture = ExtResource("31_4hpl8")
 
+[node name="Button" type="Button" parent="room2/door2"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -114.0
+offset_top = -181.0
+offset_right = 12.0
+offset_bottom = 213.0
+
 [node name="Area2D" type="Area2D" parent="room2/door2"]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="room2/door2/Area2D"]
-position = Vector2(-43, 51)
+position = Vector2(-36.8877, 0.182404)
 rotation = 0.0698131
 shape = SubResource("RectangleShape2D_lvb0s")
 
@@ -790,6 +855,44 @@ offset_top = 110.0
 offset_right = 190.0
 offset_bottom = 601.0
 
+[node name="scale" type="Node2D" parent="room3"]
+position = Vector2(424, 271)
+script = ExtResource("52_q2oox")
+
+[node name="feather_scale" type="TextureRect" parent="room3"]
+visible = false
+offset_left = 474.0
+offset_top = 236.0
+offset_right = 612.0
+offset_bottom = 338.0
+texture = ExtResource("34_srims")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="heart_sacle" type="TextureRect" parent="room3"]
+visible = false
+offset_left = 233.0
+offset_top = 141.0
+offset_right = 424.0
+offset_bottom = 370.0
+texture = ExtResource("32_6i6x7")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="feather" type="Button" parent="room3"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 460.0
+offset_top = 235.0
+offset_right = 594.0
+offset_bottom = 342.0
+
+[node name="heart" type="Button" parent="room3"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 265.0
+offset_top = 233.0
+offset_right = 376.0
+offset_bottom = 329.0
+
 [node name="inventory" type="Node2D" parent="."]
 script = ExtResource("10_v5uqr")
 
@@ -805,7 +908,8 @@ texture = ExtResource("11_lww6h")
 
 [node name="room1_scroll1" type="Node2D" parent="inventory"]
 visible = false
-position = Vector2(161, 664)
+position = Vector2(136.2, 657.465)
+rotation = -1.00007
 
 [node name="TextureRect" type="TextureRect" parent="inventory/room1_scroll1"]
 offset_left = -67.0
@@ -818,7 +922,7 @@ stretch_mode = 4
 
 [node name="salt" type="Node2D" parent="inventory"]
 visible = false
-position = Vector2(296.55, 667.135)
+position = Vector2(223.55, 667.135)
 
 [node name="TextureRect" type="TextureRect" parent="inventory/salt"]
 offset_left = -97.55
@@ -831,7 +935,7 @@ stretch_mode = 4
 
 [node name="room1_scroll2_floor_shelf" type="Node2D" parent="inventory"]
 visible = false
-position = Vector2(390, 660)
+position = Vector2(317, 660)
 rotation = -0.856957
 
 [node name="floor" type="TextureRect" parent="inventory/room1_scroll2_floor_shelf"]
@@ -845,7 +949,7 @@ stretch_mode = 4
 
 [node name="frank" type="Node2D" parent="inventory"]
 visible = false
-position = Vector2(489.03, 672.07)
+position = Vector2(416.03, 672.07)
 
 [node name="TextureRect" type="TextureRect" parent="inventory/frank"]
 offset_left = -64.03
@@ -858,7 +962,7 @@ stretch_mode = 4
 
 [node name="beeswax" type="Node2D" parent="inventory"]
 visible = false
-position = Vector2(593.77, 665.59)
+position = Vector2(520.77, 665.59)
 
 [node name="TextureRect" type="TextureRect" parent="inventory/beeswax"]
 offset_left = -77.77
@@ -871,7 +975,7 @@ stretch_mode = 4
 
 [node name="linen" type="Node2D" parent="inventory"]
 visible = false
-position = Vector2(675.835, 658.31)
+position = Vector2(602.835, 658.31)
 
 [node name="TextureRect" type="TextureRect" parent="inventory/linen"]
 offset_left = -95.835
@@ -884,7 +988,7 @@ stretch_mode = 4
 
 [node name="key" type="Node2D" parent="inventory"]
 visible = false
-position = Vector2(763.51, 669.925)
+position = Vector2(688.51, 669.925)
 
 [node name="TextureRect" type="TextureRect" parent="inventory/key"]
 offset_left = -59.51
@@ -897,7 +1001,7 @@ stretch_mode = 4
 
 [node name="room2_scroll" type="Node2D" parent="inventory"]
 visible = false
-position = Vector2(837.82, 653)
+position = Vector2(762.82, 653)
 rotation = -1.20602
 
 [node name="TextureRect" type="TextureRect" parent="inventory/room2_scroll"]
@@ -911,7 +1015,7 @@ stretch_mode = 4
 
 [node name="cheat" type="Node2D" parent="inventory"]
 visible = false
-position = Vector2(914.495, 642.73)
+position = Vector2(839.495, 642.73)
 rotation = 1.5708
 
 [node name="TextureRect" type="TextureRect" parent="inventory/cheat"]
@@ -925,7 +1029,7 @@ stretch_mode = 4
 
 [node name="r2Key" type="Node2D" parent="inventory"]
 visible = false
-position = Vector2(974.18, 655)
+position = Vector2(899.18, 655)
 
 [node name="TextureRect" type="TextureRect" parent="inventory/r2Key"]
 offset_left = -69.18
@@ -938,7 +1042,7 @@ stretch_mode = 4
 
 [node name="feather" type="Node2D" parent="inventory"]
 visible = false
-position = Vector2(1050, 643)
+position = Vector2(975, 643)
 
 [node name="TextureRect" type="TextureRect" parent="inventory/feather"]
 offset_left = -72.0
@@ -951,7 +1055,7 @@ stretch_mode = 4
 
 [node name="scroll1_rm3" type="Node2D" parent="inventory"]
 visible = false
-position = Vector2(1126.57, 654.31)
+position = Vector2(1051.57, 654.31)
 rotation = -0.645772
 
 [node name="TextureRect" type="TextureRect" parent="inventory/scroll1_rm3"]
@@ -965,7 +1069,7 @@ stretch_mode = 4
 
 [node name="scroll2_rm3" type="Node2D" parent="inventory"]
 visible = false
-position = Vector2(1216, 660)
+position = Vector2(1141, 660)
 
 [node name="TextureRect" type="TextureRect" parent="inventory/scroll2_rm3"]
 offset_left = -54.0
@@ -973,6 +1077,19 @@ offset_top = -42.0
 offset_right = 44.0
 offset_bottom = 53.0
 texture = ExtResource("36_hoel8")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="heart" type="Node2D" parent="inventory"]
+visible = false
+position = Vector2(1223, 647)
+
+[node name="TextureRect" type="TextureRect" parent="inventory/heart"]
+offset_left = -61.0
+offset_top = -96.0
+offset_right = 304.0
+offset_bottom = 74.0
+texture = ExtResource("32_6i6x7")
 expand_mode = 1
 stretch_mode = 4
 
@@ -1000,6 +1117,7 @@ stretch_mode = 4
 [connection signal="mouse_exited" from="room1/scarcoph_key/Area2D" to="room1/scarcoph_key" method="_on_area_2d_mouse_exited"]
 [connection signal="mouse_entered" from="room1/door/Area2D" to="room1/door" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="room1/door/Area2D" to="room1/door" method="_on_area_2d_mouse_exited"]
+[connection signal="pressed" from="room1/organ/Button" to="room1/organ" method="_on_button_pressed"]
 [connection signal="mouse_entered" from="room2/scroll1/Area2D" to="room2/scroll1" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="room2/scroll1/Area2D" to="room2/scroll1" method="_on_area_2d_mouse_exited"]
 [connection signal="mouse_entered" from="room2/vase/Area2D" to="room2/vase" method="_on_area_2d_mouse_entered"]
@@ -1014,6 +1132,7 @@ stretch_mode = 4
 [connection signal="mouse_exited" from="room2/hyro_feather/Area2D" to="room2/hyro_feather" method="_on_area_2d_mouse_exited"]
 [connection signal="mouse_entered" from="room2/door1/Area2D" to="room2/door1" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="room2/door1/Area2D" to="room2/door1" method="_on_area_2d_mouse_exited"]
+[connection signal="pressed" from="room2/door2/Button" to="room2/door2" method="_on_button_pressed"]
 [connection signal="mouse_entered" from="room2/door2/Area2D" to="room2/door2" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="room2/door2/Area2D" to="room2/door2" method="_on_area_2d_mouse_exited"]
 [connection signal="mouse_entered" from="room3/door/Area2D" to="room3/door" method="_on_area_2d_mouse_entered"]
@@ -1021,3 +1140,5 @@ stretch_mode = 4
 [connection signal="mouse_entered" from="room3/scroll/Area2D" to="room3/scroll" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="room3/scroll/Area2D" to="room3/scroll" method="_on_area_2d_mouse_exited"]
 [connection signal="pressed" from="room3/Button" to="room3/door" method="_on_button_pressed"]
+[connection signal="pressed" from="room3/feather" to="room3/scale" method="_on_feather_pressed"]
+[connection signal="pressed" from="room3/heart" to="room3/scale" method="_on_heart_pressed"]

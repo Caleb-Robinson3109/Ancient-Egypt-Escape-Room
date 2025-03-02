@@ -29,3 +29,6 @@ var has_feather = false
 var unlock_door2 = false
 
 var has_rm3_scrolls = false
+var has_heart = false
+
+var complete_quiz = false

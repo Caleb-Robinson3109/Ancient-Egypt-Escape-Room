@@ -79,10 +79,18 @@ extends Node
 @onready var scroll_2_rm_3 = $inventory/scroll2_rm3
 @onready var scroll_rm_3 = $room3/scroll
 
+#heart
+@onready var hcrack_0 = $room1/organ/crack0
+@onready var hcrack_2 = $room1/organ/crack2
+@onready var heart_inv = $inventory/heart
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Global.stachue1 = ""
+	Global.stachue2 = ""
+	Global.stachue3 = ""
+	Global.stachue4 = ""
 	if(Global.room1_has_scroll1):
 		scroll_1.visible = false
 		scroll1_inv.visible = true
@@ -144,6 +152,10 @@ func _ready():
 		scroll_rm_3.visible = false
 		scroll_1_rm_3.visible = true
 		scroll_2_rm_3.visible = true
+	if(Global.has_heart):
+		hcrack_0.visible = false
+		hcrack_2.visible = true
+		heart_inv.visible = true
 		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

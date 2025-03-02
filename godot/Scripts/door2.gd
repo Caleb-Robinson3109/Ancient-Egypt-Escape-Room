@@ -30,3 +30,13 @@ func _on_area_2d_mouse_entered():
 
 func _on_area_2d_mouse_exited():
 	mouse = true
+
+
+func _on_button_pressed():
+	if(Global.unlock_door2 == false):
+		if(r_2_key.visible == true):
+			Global.unlock_door2 = true
+			r_2_key.visible = false
+	else:
+		room_2.visible = false
+		room_3.visible = true

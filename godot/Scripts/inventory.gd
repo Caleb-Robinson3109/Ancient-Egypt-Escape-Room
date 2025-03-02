@@ -14,6 +14,7 @@ extends Node2D
 @onready var m = $feather
 @onready var n = $scroll1_rm3
 @onready var o = $scroll2_rm3
+@onready var p = $heart
 
 
 
@@ -22,7 +23,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	inv = [a, b, c, d, e, f, g, h, j, k, l, m, n, o]
+	inv = [a, b, c, d, e, f, g, h, j, k, l, m, n, o, p]
 	i = 0
 	#print(inv[i].name)#scale = 1.2
 	inv[i].scale.x = 1.2

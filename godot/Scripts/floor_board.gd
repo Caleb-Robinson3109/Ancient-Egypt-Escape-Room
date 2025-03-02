@@ -4,6 +4,7 @@ extends Node2D
 @onready var crack_2 = $crack2
 @onready var crack_3 = $crack3
 @onready var inv = $"../../inventory/room1_scroll2_floor_shelf"
+@onready var heart = $"../../inventory/heart"
 
 var crack: int = 0
 @export var mouse: bool = false
