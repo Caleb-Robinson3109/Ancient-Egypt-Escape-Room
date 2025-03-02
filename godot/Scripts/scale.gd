@@ -21,9 +21,15 @@ func _on_heart_pressed():
 	if(heart.visible == true):
 		heart_sacle.visible = true
 		heart.visible = false
+		Global.complete_heart = true
+		if(Global.complete_quiz && Global.complete_feather):
+			get_tree().change_scene_to_file("res://Scenes/win.tscn")
 
 
 func _on_feather_pressed():
 	if(feather.visible == true):
 		feather_scale.visible = true
 		feather.visible = false
+		Global.complete_feather = true
+		if(Global.complete_quiz && Global.complete_heart):
+			get_tree().change_scene_to_file("res://Scenes/win.tscn")

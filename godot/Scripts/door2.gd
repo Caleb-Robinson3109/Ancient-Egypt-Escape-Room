@@ -3,6 +3,7 @@ extends Node2D
 @onready var room_2 = $".."
 @export var mouse: bool = false
 @onready var r_2_key = $"../../inventory/r2Key"
+@onready var main = $"../.."
 
 func _input(event):
 	if event.is_action_pressed("click"):
@@ -14,6 +15,7 @@ func _input(event):
 			else:
 				room_2.visible = false
 				room_3.visible = true
+				Global.room = 3
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -40,3 +42,4 @@ func _on_button_pressed():
 	else:
 		room_2.visible = false
 		room_3.visible = true
+		Global.room = 3

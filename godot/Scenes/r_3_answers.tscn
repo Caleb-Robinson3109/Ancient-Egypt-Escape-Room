@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwyx26auco2sh"]
+
+[ext_resource type="Script" path="res://r3 answers.gd" id="1_gyqek"]
+[ext_resource type="Texture2D" uid="uid://bgu4h54ewwkhl" path="res://Assets/Other Assets/Room 3 Riddle.png" id="2_rgl54"]
+
+[node name="r3 answers" type="Node2D"]
+script = ExtResource("1_gyqek")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_rgl54")
+
+[node name="LineEdit_north" type="LineEdit" parent="."]
+offset_left = 345.0
+offset_top = 93.0
+offset_right = 919.0
+offset_bottom = 162.0
+theme_override_font_sizes/font_size = 41
+alignment = 1
+
+[node name="LineEdit_lower" type="LineEdit" parent="."]
+offset_left = 337.0
+offset_top = 257.0
+offset_right = 918.0
+offset_bottom = 331.0
+theme_override_font_sizes/font_size = 46
+alignment = 1
+max_length = 5
+
+[node name="LineEdit_ciro" type="LineEdit" parent="."]
+offset_left = 333.0
+offset_top = 613.0
+offset_right = 932.0
+offset_bottom = 687.0
+theme_override_font_sizes/font_size = 36
+alignment = 1
+
+[node name="back" type="Button" parent="."]
+offset_left = 1073.0
+offset_top = 24.0
+offset_right = 1241.0
+offset_bottom = 110.0
+theme_override_font_sizes/font_size = 61
+text = "Back"
+
+[node name="enter" type="Button" parent="."]
+offset_left = 1065.0
+offset_top = 599.0
+offset_right = 1232.0
+offset_bottom = 684.0
+theme_override_font_sizes/font_size = 61
+text = "Enter"
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="enter" to="." method="_on_enter_pressed"]

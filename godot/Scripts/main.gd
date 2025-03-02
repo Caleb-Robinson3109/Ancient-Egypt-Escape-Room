@@ -1,5 +1,12 @@
 extends Node
 
+
+@onready var room1 = $room1
+@onready var room2 = $room2
+@onready var room3 = $room3
+
+
+
 #from the frist scroll
 @onready var scroll_1 = $room1/scroll1
 @onready var scroll1_inv = $inventory/room1_scroll1
@@ -84,6 +91,9 @@ extends Node
 @onready var hcrack_2 = $room1/organ/crack2
 @onready var heart_inv = $inventory/heart
 
+#scale
+@onready var feather_scale = $room3/feather_scale
+@onready var heart_sacle = $room3/heart_sacle
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -123,6 +133,10 @@ func _ready():
 		scarcoph_key.visible = false
 	if(Global.unlock_door):
 		skey.visible = false
+		salt_inv.visible = false
+		frank.visible = false
+		beeswax.visible = false
+		linen_inv.visible = false
 	if(Global.has_scroll_1_room2):
 		r2_scroll_1.visible = false
 		room_2_scroll.visible = true
@@ -156,6 +170,25 @@ func _ready():
 		hcrack_0.visible = false
 		hcrack_2.visible = true
 		heart_inv.visible = true
+		
+	if(Global.room == 1):
+		room1.visible = true
+		room2.visible = false
+		room3.visible = false
+	elif(Global.room == 2):
+		room1.visible = false
+		room2.visible = true
+		room3.visible = false
+	else:
+		room1.visible = false
+		room2.visible = false
+		room3.visible = true
+		
+	if(Global.complete_feather):
+		feather_scale.visible = true
+		
+	if(Global.complete_heart):
+		heart_sacle.visible = true
 		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cc1f610dilsa0"]
+
+[ext_resource type="Texture2D" uid="uid://c62q8rmxufnd3" path="res://Assets/Other Assets/You win!.png" id="1_j16ro"]
+
+[node name="win" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_j16ro")

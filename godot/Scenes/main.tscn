@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=3 uid="uid://baduux6f02c46"]
+[gd_scene load_steps=79 format=3 uid="uid://baduux6f02c46"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_2w4k7"]
 [ext_resource type="Script" path="res://Scripts/room1_scroll1.gd" id="2_4bmf5"]
@@ -55,6 +55,7 @@
 [ext_resource type="Script" path="res://Scripts/scroll.gd" id="35_66ar2"]
 [ext_resource type="Texture2D" uid="uid://bsvak2m328ilr" path="res://Assets/Room1/Untitled_Artwork 5.png" id="36_hoel8"]
 [ext_resource type="Script" path="res://Scripts/scale.gd" id="52_q2oox"]
+[ext_resource type="Script" path="res://Scripts/Buttons_rm3.gd" id="54_dun5t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d7va3"]
 size = Vector2(189.431, 61.4319)
@@ -127,7 +128,6 @@ size = Vector2(133.379, 46.396)
 script = ExtResource("1_2w4k7")
 
 [node name="room1" type="Node2D" parent="."]
-visible = false
 position = Vector2(0, -1)
 
 [node name="background" type="TextureRect" parent="room1"]
@@ -802,6 +802,7 @@ rotation = 0.0698131
 shape = SubResource("RectangleShape2D_lvb0s")
 
 [node name="room3" type="Node2D" parent="."]
+visible = false
 
 [node name="backgorund" type="TextureRect" parent="room3"]
 offset_right = 40.0
@@ -892,6 +893,28 @@ offset_left = 265.0
 offset_top = 233.0
 offset_right = 376.0
 offset_bottom = 329.0
+
+[node name="Button upper lower" type="Button" parent="room3"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 1081.0
+offset_top = 37.0
+offset_right = 1259.0
+offset_bottom = 196.0
+script = ExtResource("54_dun5t")
+
+[node name="Button north" type="Button" parent="room3"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 1071.0
+offset_top = 248.0
+offset_right = 1257.0
+offset_bottom = 361.0
+
+[node name="button giza" type="Button" parent="room3"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 1067.0
+offset_top = 417.0
+offset_right = 1259.0
+offset_bottom = 553.0
 
 [node name="inventory" type="Node2D" parent="."]
 script = ExtResource("10_v5uqr")
@@ -1142,3 +1165,6 @@ stretch_mode = 4
 [connection signal="pressed" from="room3/Button" to="room3/door" method="_on_button_pressed"]
 [connection signal="pressed" from="room3/feather" to="room3/scale" method="_on_feather_pressed"]
 [connection signal="pressed" from="room3/heart" to="room3/scale" method="_on_heart_pressed"]
+[connection signal="pressed" from="room3/Button upper lower" to="room3/Button upper lower" method="_on_pressed"]
+[connection signal="pressed" from="room3/Button north" to="room3/Button upper lower" method="_on_button_north_pressed"]
+[connection signal="pressed" from="room3/button giza" to="room3/Button upper lower" method="_on_button_giza_pressed"]

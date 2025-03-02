@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://xq6jrujklpw4"]
+
+[ext_resource type="Script" path="res://Scripts/horus.gd" id="1_clkas"]
+[ext_resource type="Texture2D" uid="uid://bs6nie3ey18hi" path="res://Assets/Other Assets/Horus Info.png" id="2_wpeo3"]
+
+[node name="horus" type="Node2D"]
+script = ExtResource("1_clkas")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_wpeo3")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 972.0
+offset_top = 45.0
+offset_right = 1219.0
+offset_bottom = 158.0
+theme_override_font_sizes/font_size = 76
+text = "Back"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

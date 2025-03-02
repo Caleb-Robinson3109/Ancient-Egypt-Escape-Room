@@ -32,3 +32,7 @@ var has_rm3_scrolls = false
 var has_heart = false
 
 var complete_quiz = false
+var complete_feather = false
+var complete_heart = false
+
+var room = 1

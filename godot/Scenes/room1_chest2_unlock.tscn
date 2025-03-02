@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://byljt12f0cbeb"]
 
 [ext_resource type="Script" path="res://Scripts/room1_chest2_unlock.gd" id="1_aolb3"]
-[ext_resource type="Texture2D" uid="uid://dy0j6u1ve0xhy" path="res://Assets/Other Assets/unlock_chest1_room1_temp.png" id="1_xncj5"]
+[ext_resource type="Texture2D" uid="uid://beswc52yp1c5g" path="res://Assets/Other Assets/Anubis Answer.png" id="2_xn2hi"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_aolb3")
@@ -9,27 +9,76 @@ script = ExtResource("1_aolb3")
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("1_xncj5")
+texture = ExtResource("2_xn2hi")
 
 [node name="exit" type="Button" parent="."]
-offset_left = 1030.0
-offset_top = 38.0
-offset_right = 1157.0
-offset_bottom = 143.0
-text = "exit"
+offset_left = 1087.0
+offset_top = 32.0
+offset_right = 1214.0
+offset_bottom = 137.0
+theme_override_font_sizes/font_size = 41
+text = "Back"
 
 [node name="unlock" type="Button" parent="."]
-offset_left = 536.0
-offset_top = 542.0
-offset_right = 742.0
-offset_bottom = 643.0
+offset_left = 570.0
+offset_top = 548.0
+offset_right = 776.0
+offset_bottom = 649.0
+theme_override_font_sizes/font_size = 51
 text = "unlock"
 
-[node name="LineEdit" type="LineEdit" parent="."]
-offset_left = 285.0
-offset_top = 285.0
-offset_right = 1122.0
-offset_bottom = 451.0
+[node name="LineEdita" type="LineEdit" parent="."]
+offset_left = 24.0
+offset_top = 276.0
+offset_right = 208.0
+offset_bottom = 442.0
+theme_override_font_sizes/font_size = 41
+alignment = 1
+max_length = 1
+
+[node name="LineEditn" type="LineEdit" parent="."]
+offset_left = 235.0
+offset_top = 276.0
+offset_right = 411.0
+offset_bottom = 442.0
+theme_override_font_sizes/font_size = 46
+alignment = 1
+max_length = 1
+
+[node name="LineEditu" type="LineEdit" parent="."]
+offset_left = 441.0
+offset_top = 275.0
+offset_right = 625.0
+offset_bottom = 445.0
+theme_override_font_sizes/font_size = 46
+alignment = 1
+
+[node name="LineEditb" type="LineEdit" parent="."]
+offset_left = 649.0
+offset_top = 276.0
+offset_right = 829.0
+offset_bottom = 448.0
+theme_override_font_sizes/font_size = 46
+alignment = 1
+max_length = 1
+
+[node name="LineEditi" type="LineEdit" parent="."]
+offset_left = 1068.0
+offset_top = 276.0
+offset_right = 1249.0
+offset_bottom = 442.0
+theme_override_font_sizes/font_size = 46
+alignment = 1
+max_length = 1
+
+[node name="LineEdits" type="LineEdit" parent="."]
+offset_left = 861.0
+offset_top = 276.0
+offset_right = 1041.0
+offset_bottom = 445.0
+theme_override_font_sizes/font_size = 46
+alignment = 1
+max_length = 1
 
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="unlock" to="." method="_on_unlock_pressed"]

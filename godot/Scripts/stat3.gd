@@ -21,7 +21,7 @@ func _input(event):
 			#hand
 			if(inventory.i == 0):
 				if(Global.stachue3 == ""):
-					pass
+					get_tree().change_scene_to_file("res://Scenes/horus.tscn")
 					#read the thing
 				else:
 					if(Global.stachue3 == "salt"):

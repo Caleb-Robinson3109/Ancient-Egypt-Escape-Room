@@ -29,12 +29,32 @@ func _ready():
 	inv[i].scale.x = 1.2
 	inv[i].scale.y = 1.2
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
 func _input(event):
+	if event.is_action_pressed("click"):
+		#welcome scroll
+		if(i == 1):
+			get_tree().change_scene_to_file("res://Scenes/welcome_scroll.tscn")
+			
+		#floor and shelf scrool
+		elif(i == 3):
+			get_tree().change_scene_to_file("res://Scenes/2_part_scroll.tscn")
+		
+		#room 2 scroll
+		elif(i == 8):
+			get_tree().change_scene_to_file("res://Scenes/rm_2_scroll.tscn")
+			
+		#glypth cheat cheat
+		elif(i == 9):
+			get_tree().change_scene_to_file("res://Scenes/cheat_cheat.tscn")
+			
+		#rm3 rules
+		elif(i == 12):
+			get_tree().change_scene_to_file("res://Scenes/r_3_scroll_rules.tscn")
+			
+		#rm3 answers
+		elif(i == 13):
+			get_tree().change_scene_to_file("res://Scenes/r_3_answers.tscn")
+		
 	if event.is_action_pressed("up"):
 		inv[i].scale.x = 1
 		inv[i].scale.y = 1

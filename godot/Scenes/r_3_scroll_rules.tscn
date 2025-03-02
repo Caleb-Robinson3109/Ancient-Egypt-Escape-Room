@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://hokm0ht2frr3"]
+
+[ext_resource type="Script" path="res://Scripts/r3 scroll rules.gd" id="1_8g20j"]
+[ext_resource type="Texture2D" uid="uid://cpahrac4wxyun" path="res://Assets/Other Assets/Room 3 Tasks.png" id="2_due67"]
+
+[node name="r3 scroll rules" type="Node2D"]
+script = ExtResource("1_8g20j")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_due67")
+
+[node name="Button" type="Button" parent="TextureRect"]
+offset_left = 961.0
+offset_top = 554.0
+offset_right = 1155.0
+offset_bottom = 667.0
+theme_override_font_sizes/font_size = 71
+text = "Back"
+
+[connection signal="pressed" from="TextureRect/Button" to="." method="_on_button_pressed"]

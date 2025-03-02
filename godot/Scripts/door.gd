@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var key = $"../../inventory/key"
+@onready var main = $"../.."
 
 @export var mouse: bool = false
 var bigger: bool = true
@@ -21,6 +22,7 @@ func _input(event):
 			else:
 				room_1.visible = false
 				room_2.visible = true
+				Global.room = 2
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
