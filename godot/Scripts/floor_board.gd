@@ -34,17 +34,7 @@ func _input(event):
 			
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if(mouse):
-		if(bigger):
-			floor_board.scale.x = floor_board.scale.x + 0.005
-			floor_board.scale.y = floor_board.scale.y + 0.005
-			if(floor_board.scale.x >= 1.2):
-				bigger = false
-		else:
-			floor_board.scale.x = floor_board.scale.x - 0.005
-			floor_board.scale.y = floor_board.scale.y - 0.005
-			if(floor_board.scale.x <= 1):
-				bigger = true
+	pass
 
 
 func _on_area_2d_mouse_entered():

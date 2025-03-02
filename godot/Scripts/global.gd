@@ -27,3 +27,5 @@ var has_hyro3 = false
 var has_hyro_key = false
 var has_feather = false
 var unlock_door2 = false
+
+var has_rm3_scrolls = false

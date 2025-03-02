@@ -1,13 +1,20 @@
 extends Node2D
 
-@onready var hand = $hand
-@onready var room_1_scroll_1 = $room1_scroll1
-@onready var salt = $salt
-@onready var room_1_scroll_2_floor = $room1_scroll2_floor
-@onready var room_1_scroll_2_shelf = $room1_scroll2_shelf
-@onready var frank = $frank
-@onready var beeswax = $beeswax
-@onready var linen = $linen
+@onready var a = $hand
+@onready var b = $room1_scroll1
+@onready var c = $salt
+@onready var d = $room1_scroll2_floor_shelf
+@onready var e = $frank
+@onready var f = $beeswax
+@onready var g = $linen
+@onready var h = $key
+@onready var j = $room2_scroll
+@onready var k = $cheat
+@onready var l = $r2Key
+@onready var m = $feather
+@onready var n = $scroll1_rm3
+@onready var o = $scroll2_rm3
+
 
 
 @export var inv = []
@@ -15,7 +22,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	inv = [hand, room_1_scroll_1, salt, room_1_scroll_2_floor, room_1_scroll_2_shelf, frank, beeswax, linen]
+	inv = [a, b, c, d, e, f, g, h, j, k, l, m, n, o]
 	i = 0
 	#print(inv[i].name)#scale = 1.2
 	inv[i].scale.x = 1.2

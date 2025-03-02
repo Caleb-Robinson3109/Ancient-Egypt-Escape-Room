@@ -1,30 +1,38 @@
-[gd_scene load_steps=58 format=3 uid="uid://baduux6f02c46"]
+[gd_scene load_steps=72 format=3 uid="uid://baduux6f02c46"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_2w4k7"]
-[ext_resource type="Texture2D" uid="uid://c6qva3l7lfq33" path="res://Assets/Room1/room1_template.jpg" id="1_rhnlx"]
 [ext_resource type="Script" path="res://Scripts/room1_scroll1.gd" id="2_4bmf5"]
+[ext_resource type="Texture2D" uid="uid://dvp40pdsimxul" path="res://Assets/Room1/Room 1 Background.jpg" id="2_6g7cp"]
 [ext_resource type="Texture2D" uid="uid://dvgkvrmhk620h" path="res://Assets/Other Assets/test.png" id="3_6q350"]
 [ext_resource type="Script" path="res://Scripts/chest1_room1.gd" id="4_q64sd"]
-[ext_resource type="Texture2D" uid="uid://b1puy4mfix1ek" path="res://Assets/Other Assets/temp paper.png" id="4_t4m3y"]
+[ext_resource type="Texture2D" uid="uid://bbqrc1j28sgcl" path="res://Assets/Room1/Untitled_Artwork 11.png" id="6_ielpt"]
 [ext_resource type="Script" path="res://Scripts/floor_board.gd" id="6_jjws6"]
+[ext_resource type="Texture2D" uid="uid://bdu2yrphmcsky" path="res://Assets/Room1/Untitled_Artwork 12.png" id="7_jnpyh"]
 [ext_resource type="Script" path="res://Scripts/shelf_scroll.gd" id="7_mchhl"]
 [ext_resource type="Script" path="res://Scripts/room1_chest2_closed.gd" id="8_2r6eb"]
 [ext_resource type="Script" path="res://Scripts/linen.gd" id="9_rcbik"]
+[ext_resource type="Texture2D" uid="uid://c1jbxc2k2ttij" path="res://Assets/Room1/Untitled_Artwork 1.png" id="9_tiq70"]
 [ext_resource type="Script" path="res://Scripts/salt_wall.gd" id="10_2pgfc"]
+[ext_resource type="Texture2D" uid="uid://lavgd5lndxrm" path="res://Assets/Room1/Untitled_Artwork 2.png" id="10_l0nku"]
 [ext_resource type="Script" path="res://Scripts/inventory.gd" id="10_v5uqr"]
 [ext_resource type="Script" path="res://Scripts/stat2.gd" id="11_bddum"]
 [ext_resource type="Texture2D" uid="uid://eevvf1ark7a2" path="res://Assets/Other Assets/temp_hand.png" id="11_lww6h"]
 [ext_resource type="Script" path="res://Scripts/stat3.gd" id="12_tf8ql"]
 [ext_resource type="Script" path="res://Scripts/stat4.gd" id="13_wewro"]
 [ext_resource type="Script" path="res://Scripts/scarcoph_key.gd" id="14_u7ex4"]
+[ext_resource type="Texture2D" uid="uid://sc01wdtcgfv5" path="res://Assets/Room1/Untitled_Artwork 3.png" id="14_uysmk"]
 [ext_resource type="Script" path="res://Scripts/door.gd" id="15_g2fik"]
+[ext_resource type="Texture2D" uid="uid://dq4hmlgftceeq" path="res://Assets/Room1/Untitled_Artwork 16.png" id="16_6ngg7"]
 [ext_resource type="Texture2D" uid="uid://q5ug7owwi1pm" path="res://Assets/Room2/Untitled_Artwork 23.png" id="16_x82b4"]
 [ext_resource type="Texture2D" uid="uid://6owxj6crtfbp" path="res://Assets/Room2/Untitled_Artwork 5.png" id="17_bpf3e"]
 [ext_resource type="Script" path="res://Scripts/scroll1.gd" id="17_o8wl4"]
+[ext_resource type="Texture2D" uid="uid://2ixqfumgv1q4" path="res://Assets/Room1/Untitled_Artwork 13.png" id="17_x26g0"]
+[ext_resource type="Texture2D" uid="uid://c6aae4ukfo1hb" path="res://Assets/Room1/Untitled_Artwork 14.png" id="18_wpjou"]
 [ext_resource type="Script" path="res://Scripts/vase.gd" id="19_mu61u"]
 [ext_resource type="Texture2D" uid="uid://b35xilcven31b" path="res://Assets/Room2/Untitled_Artwork 21.png" id="20_eomlb"]
 [ext_resource type="Texture2D" uid="uid://c0xamrop75ta1" path="res://Assets/Room2/Untitled_Artwork 22.png" id="21_rw2kn"]
 [ext_resource type="Texture2D" uid="uid://qn71ntuatutn" path="res://Assets/Room2/Untitled_Artwork 17.png" id="22_8bjgn"]
+[ext_resource type="Texture2D" uid="uid://de1fnhi2fotvf" path="res://Assets/Room1/Untitled_Artwork 10.png" id="22_8tyrj"]
 [ext_resource type="Script" path="res://Scripts/hyro1.gd" id="22_k0um7"]
 [ext_resource type="Texture2D" uid="uid://cou6m2rhr0pa7" path="res://Assets/Room2/Untitled_Artwork 19.png" id="23_ksv1p"]
 [ext_resource type="Texture2D" uid="uid://bkqsu5i712556" path="res://Assets/Room2/Untitled_Artwork 18.png" id="24_ndv13"]
@@ -36,37 +44,41 @@
 [ext_resource type="Script" path="res://Scripts/door1.gd" id="30_hkx8r"]
 [ext_resource type="Texture2D" uid="uid://bnofthcmck11q" path="res://Assets/Room1/Untitled_Artwork 4.png" id="31_4hpl8"]
 [ext_resource type="Script" path="res://Scripts/door2.gd" id="32_q5sav"]
+[ext_resource type="Texture2D" uid="uid://dscsj1y4obk0d" path="res://Assets/Room3/Untitled_Artwork 24.png" id="33_i73e3"]
+[ext_resource type="Script" path="res://Scripts/door_3.gd" id="34_kognu"]
 [ext_resource type="Texture2D" uid="uid://b204opd3n2prc" path="res://Assets/Room2/Untitled_Artwork 25.png" id="34_srims"]
+[ext_resource type="Script" path="res://Scripts/scroll.gd" id="35_66ar2"]
+[ext_resource type="Texture2D" uid="uid://bsvak2m328ilr" path="res://Assets/Room1/Untitled_Artwork 5.png" id="36_hoel8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d7va3"]
-size = Vector2(268.384, 77.9688)
+size = Vector2(189.431, 61.4319)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_427pk"]
 size = Vector2(177, 162)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b31p8"]
-size = Vector2(134, 79)
+size = Vector2(164, 77)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fblq2"]
-size = Vector2(55, 123.5)
+size = Vector2(43.9379, 102.103)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hi2ay"]
-size = Vector2(164, 155)
+size = Vector2(178, 171.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cucog"]
 size = Vector2(89, 79)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gffxr"]
-size = Vector2(88, 136)
+size = Vector2(91, 156)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nk7d0"]
-size = Vector2(79, 152)
+size = Vector2(93, 156)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sgp0k"]
-size = Vector2(88, 147)
+size = Vector2(92, 158)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b2f0l"]
-size = Vector2(86, 157)
+size = Vector2(92, 158)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2mp7k"]
 size = Vector2(162, 366)
@@ -99,53 +111,63 @@ size = Vector2(146, 471)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lvb0s"]
 size = Vector2(117.461, 500.025)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i4hje"]
+size = Vector2(119.24, 466.909)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e7o3b"]
+size = Vector2(133.379, 46.396)
+
 [node name="main" type="Node"]
 script = ExtResource("1_2w4k7")
 
 [node name="room1" type="Node2D" parent="."]
-visible = false
 position = Vector2(0, -1)
 
 [node name="background" type="TextureRect" parent="room1"]
 offset_right = 1819.0
 offset_bottom = 720.0
-texture = ExtResource("1_rhnlx")
+texture = ExtResource("2_6g7cp")
 expand_mode = 3
 stretch_mode = 4
 
 [node name="scroll1" type="Node2D" parent="room1"]
-position = Vector2(620.285, 600)
-rotation = -0.403171
+position = Vector2(615.985, 517.145)
+rotation = -0.116937
 script = ExtResource("2_4bmf5")
 
 [node name="scroll1_texture" type="TextureRect" parent="room1/scroll1"]
 offset_left = -95.0
 offset_top = -12.0
-offset_right = 80.0
-offset_bottom = 22.0
-texture = ExtResource("3_6q350")
+offset_right = 504.0
+offset_bottom = 151.0
+texture = ExtResource("36_hoel8")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="Area2D" type="Area2D" parent="room1/scroll1"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="room1/scroll1/Area2D"]
-position = Vector2(7.39545, 6.10254)
+position = Vector2(-12.6113, 63.5472)
+rotation = -0.307178
 shape = SubResource("RectangleShape2D_d7va3")
 
 [node name="chest1_closed" type="Node2D" parent="room1"]
-position = Vector2(105, 599)
+position = Vector2(353.19, 477.51)
 script = ExtResource("4_q64sd")
 
 [node name="TextureRect_closed" type="TextureRect" parent="room1/chest1_closed"]
-offset_left = -56.0
-offset_top = -72.0
-offset_right = 72.0
-offset_bottom = 51.0
-texture = ExtResource("3_6q350")
+offset_left = -62.19
+offset_top = -133.51
+offset_right = 145.81
+offset_bottom = 57.49
+texture = ExtResource("6_ielpt")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="Area2D" type="Area2D" parent="room1/chest1_closed"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="room1/chest1_closed/Area2D"]
-position = Vector2(7, -13)
+position = Vector2(33.81, -44.51)
 shape = SubResource("RectangleShape2D_427pk")
 
 [node name="chest1_open" type="Node2D" parent="room1"]
@@ -153,65 +175,70 @@ visible = false
 position = Vector2(0, 1)
 
 [node name="TextureRect_open" type="TextureRect" parent="room1/chest1_open"]
-offset_left = 20.0
-offset_top = 569.0
-offset_right = 210.0
-offset_bottom = 630.0
-texture = ExtResource("3_6q350")
+offset_left = 290.0
+offset_top = 339.0
+offset_right = 565.0
+offset_bottom = 534.0
+texture = ExtResource("7_jnpyh")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="floor_board" type="Node2D" parent="room1"]
-position = Vector2(315, 569)
 script = ExtResource("6_jjws6")
 
 [node name="floor scroll" type="TextureRect" parent="room1/floor_board"]
-offset_left = -6.0
-offset_top = -27.0
-offset_right = 19.0
-offset_bottom = 26.0
-texture = ExtResource("3_6q350")
+offset_left = 263.0
+offset_top = 497.0
+offset_right = 385.0
+offset_bottom = 637.0
+texture = ExtResource("36_hoel8")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="crack1" type="TextureRect" parent="room1/floor_board"]
-offset_left = -51.0
-offset_top = -41.0
-offset_right = 74.0
-offset_bottom = -12.0
-texture = ExtResource("3_6q350")
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("9_tiq70")
 
 [node name="crack2" type="TextureRect" parent="room1/floor_board"]
-offset_left = -60.0
-offset_top = -17.0
-offset_right = 75.0
-offset_bottom = 8.0
-texture = ExtResource("3_6q350")
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("10_l0nku")
 
 [node name="crack3" type="TextureRect" parent="room1/floor_board"]
-offset_left = -61.0
-offset_top = 3.0
-offset_right = 71.0
-offset_bottom = 30.0
-texture = ExtResource("3_6q350")
+offset_left = -628.0
+offset_top = 383.0
+offset_right = 652.0
+offset_bottom = 1103.0
+texture = ExtResource("9_tiq70")
+flip_h = true
+flip_v = true
 
 [node name="Area2D" type="Area2D" parent="room1/floor_board"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="room1/floor_board/Area2D"]
-position = Vector2(8, -6)
+position = Vector2(330, 557.5)
 shape = SubResource("RectangleShape2D_b31p8")
 
 [node name="shelf_scroll" type="Node2D" parent="room1"]
-position = Vector2(34, 205)
+position = Vector2(104.205, 255.33)
+rotation = 0.427606
 script = ExtResource("7_mchhl")
 
 [node name="TextureRect" type="TextureRect" parent="room1/shelf_scroll"]
-offset_left = -13.0
-offset_top = -34.0
-offset_right = 19.0
-offset_bottom = 50.0
-texture = ExtResource("3_6q350")
+offset_left = -49.0
+offset_top = -46.0
+offset_right = 53.0
+offset_bottom = 53.0
+texture = ExtResource("36_hoel8")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="Area2D" type="Area2D" parent="room1/shelf_scroll"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="room1/shelf_scroll/Area2D"]
-position = Vector2(11, 15.25)
+position = Vector2(0.768723, -1.09589)
+rotation = 1.07338
 shape = SubResource("RectangleShape2D_fblq2")
 
 [node name="chest2_closed" type="Node2D" parent="room1"]
@@ -219,16 +246,18 @@ position = Vector2(909, 462)
 script = ExtResource("8_2r6eb")
 
 [node name="TextureRect" type="TextureRect" parent="room1/chest2_closed"]
-offset_left = -65.0
-offset_top = -61.0
-offset_right = 63.0
-offset_bottom = 62.0
-texture = ExtResource("3_6q350")
+offset_left = -119.0
+offset_top = -123.0
+offset_right = 124.0
+offset_bottom = 72.0
+texture = ExtResource("6_ielpt")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="Area2D" type="Area2D" parent="room1/chest2_closed"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="room1/chest2_closed/Area2D"]
-position = Vector2(-3, 0.5)
+position = Vector2(-23, -29.25)
 shape = SubResource("RectangleShape2D_hi2ay")
 
 [node name="chest2_open" type="Node2D" parent="room1"]
@@ -236,60 +265,81 @@ visible = false
 position = Vector2(900, 466)
 
 [node name="TextureRect" type="TextureRect" parent="room1/chest2_open"]
-offset_left = -43.0
-offset_right = 87.0
-offset_bottom = 58.0
-texture = ExtResource("3_6q350")
+offset_left = -111.0
+offset_top = -128.0
+offset_right = 160.0
+offset_bottom = 71.0
+texture = ExtResource("7_jnpyh")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="linen" type="Node2D" parent="room1"]
 position = Vector2(113, 338)
 script = ExtResource("9_rcbik")
 
 [node name="TextureRect" type="TextureRect" parent="room1/linen"]
-offset_right = 52.0
-offset_bottom = 57.0
-texture = ExtResource("3_6q350")
+offset_left = -141.0
+offset_top = -271.0
+offset_right = 1139.0
+offset_bottom = 449.0
+texture = ExtResource("14_uysmk")
 
 [node name="Area2D" type="Area2D" parent="room1/linen"]
+position = Vector2(-11, -14)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="room1/linen/Area2D"]
-position = Vector2(34.5, 29.5)
+position = Vector2(-9, 13)
 shape = SubResource("RectangleShape2D_cucog")
 
 [node name="stat1" type="Node2D" parent="room1"]
 position = Vector2(298, 226)
 script = ExtResource("10_2pgfc")
+mouse = null
 
 [node name="salt" type="TextureRect" parent="room1/stat1"]
 visible = false
-offset_left = -33.0
-offset_top = -24.0
-offset_right = 33.0
-offset_bottom = 49.0
-texture = ExtResource("3_6q350")
+offset_left = -73.0
+offset_top = -78.0
+offset_right = 269.0
+offset_bottom = 150.0
+texture = ExtResource("16_6ngg7")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="frank" type="TextureRect" parent="room1/stat1"]
 visible = false
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("3_6q350")
+offset_left = -42.0
+offset_top = -40.0
+offset_right = 253.0
+offset_bottom = 110.0
+texture = ExtResource("17_x26g0")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="bee" type="TextureRect" parent="room1/stat1"]
 visible = false
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("3_6q350")
+offset_left = -54.0
+offset_top = -30.0
+offset_right = 110.0
+offset_bottom = 143.0
+texture = ExtResource("18_wpjou")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="linen" type="TextureRect" parent="room1/stat1"]
 visible = false
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("3_6q350")
+offset_left = -119.0
+offset_top = -197.0
+offset_right = 1451.0
+offset_bottom = 573.0
+texture = ExtResource("14_uysmk")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="Area2D" type="Area2D" parent="room1/stat1"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="room1/stat1/Area2D"]
-position = Vector2(5, 13)
+position = Vector2(14.5, 15)
 shape = SubResource("RectangleShape2D_gffxr")
 
 [node name="stat2" type="Node2D" parent="room1"]
@@ -299,34 +349,48 @@ script = ExtResource("11_bddum")
 [node name="Area2D" type="Area2D" parent="room1/stat2"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="room1/stat2/Area2D"]
-position = Vector2(0.5, 4)
+position = Vector2(1.5, 11)
 shape = SubResource("RectangleShape2D_nk7d0")
 
 [node name="salt" type="TextureRect" parent="room1/stat2"]
 visible = false
-offset_left = -33.0
-offset_top = -24.0
-offset_right = 33.0
-offset_bottom = 49.0
-texture = ExtResource("3_6q350")
+offset_left = -86.0
+offset_top = -83.0
+offset_right = 256.0
+offset_bottom = 145.0
+texture = ExtResource("16_6ngg7")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="frank" type="TextureRect" parent="room1/stat2"]
 visible = false
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("3_6q350")
+offset_left = -55.0
+offset_top = -45.0
+offset_right = 240.0
+offset_bottom = 105.0
+texture = ExtResource("17_x26g0")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="bee" type="TextureRect" parent="room1/stat2"]
 visible = false
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("3_6q350")
+offset_left = -67.0
+offset_top = -35.0
+offset_right = 97.0
+offset_bottom = 138.0
+texture = ExtResource("18_wpjou")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="linen" type="TextureRect" parent="room1/stat2"]
 visible = false
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("3_6q350")
+offset_left = -132.0
+offset_top = -202.0
+offset_right = 1438.0
+offset_bottom = 568.0
+texture = ExtResource("14_uysmk")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="stat3" type="Node2D" parent="room1"]
 position = Vector2(964, 231)
@@ -335,80 +399,110 @@ script = ExtResource("12_tf8ql")
 [node name="Area2D" type="Area2D" parent="room1/stat3"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="room1/stat3/Area2D"]
-position = Vector2(-12, -2.5)
+position = Vector2(-11, 8)
 shape = SubResource("RectangleShape2D_sgp0k")
 
 [node name="salt" type="TextureRect" parent="room1/stat3"]
 visible = false
-offset_left = -33.0
-offset_top = -24.0
-offset_right = 33.0
-offset_bottom = 49.0
-texture = ExtResource("3_6q350")
+offset_left = -241.0
+offset_top = -85.0
+offset_right = 101.0
+offset_bottom = 143.0
+texture = ExtResource("16_6ngg7")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="frank" type="TextureRect" parent="room1/stat3"]
 visible = false
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("3_6q350")
+offset_left = -210.0
+offset_top = -47.0
+offset_right = 85.0
+offset_bottom = 103.0
+texture = ExtResource("17_x26g0")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="bee" type="TextureRect" parent="room1/stat3"]
 visible = false
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("3_6q350")
+offset_left = -222.0
+offset_top = -37.0
+offset_right = -58.0
+offset_bottom = 136.0
+texture = ExtResource("18_wpjou")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="linen" type="TextureRect" parent="room1/stat3"]
 visible = false
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("3_6q350")
+offset_left = -287.0
+offset_top = -204.0
+offset_right = 1283.0
+offset_bottom = 566.0
+texture = ExtResource("14_uysmk")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="stat4" type="Node2D" parent="room1"]
 position = Vector2(819, 243)
 script = ExtResource("13_wewro")
+mouse = null
 
 [node name="Area2D" type="Area2D" parent="room1/stat4"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="room1/stat4/Area2D"]
-position = Vector2(-1, -12.5)
+position = Vector2(-8, -3)
 shape = SubResource("RectangleShape2D_b2f0l")
 
 [node name="salt" type="TextureRect" parent="room1/stat4"]
 visible = false
-offset_left = -33.0
-offset_top = -24.0
-offset_right = 33.0
-offset_bottom = 49.0
-texture = ExtResource("3_6q350")
+offset_left = 46.0
+offset_top = -98.0
+offset_right = 388.0
+offset_bottom = 130.0
+texture = ExtResource("16_6ngg7")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="frank" type="TextureRect" parent="room1/stat4"]
 visible = false
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("3_6q350")
+offset_left = 77.0
+offset_top = -60.0
+offset_right = 372.0
+offset_bottom = 90.0
+texture = ExtResource("17_x26g0")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="bee" type="TextureRect" parent="room1/stat4"]
 visible = false
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("3_6q350")
+offset_left = 65.0
+offset_top = -50.0
+offset_right = 229.0
+offset_bottom = 123.0
+texture = ExtResource("18_wpjou")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="linen" type="TextureRect" parent="room1/stat4"]
 visible = false
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("3_6q350")
+offset_top = -217.0
+offset_right = 1570.0
+offset_bottom = 553.0
+texture = ExtResource("14_uysmk")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="scarcoph_closed" type="Node2D" parent="room1"]
 position = Vector2(640, 350)
 
 [node name="TextureRect" type="TextureRect" parent="room1/scarcoph_closed"]
-offset_left = -67.0
-offset_top = -214.0
-offset_right = 78.0
-offset_bottom = 161.0
-texture = ExtResource("3_6q350")
+offset_left = -337.0
+offset_top = -364.0
+offset_right = 930.0
+offset_bottom = 300.0
+texture = ExtResource("22_8tyrj")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="scarcoph_open" type="Node2D" parent="room1"]
 visible = false
@@ -416,8 +510,8 @@ position = Vector2(659, 348)
 
 [node name="TextureRect" type="TextureRect" parent="room1/scarcoph_open"]
 offset_left = -93.0
-offset_top = -171.0
-offset_right = -53.0
+offset_top = -309.0
+offset_right = 44.0
 offset_bottom = 154.0
 texture = ExtResource("3_6q350")
 
@@ -444,11 +538,11 @@ position = Vector2(1159, 393)
 script = ExtResource("15_g2fik")
 
 [node name="TextureRect" type="TextureRect" parent="room1/door"]
-offset_left = -48.0
-offset_top = -264.0
-offset_right = 63.0
-offset_bottom = 189.0
-texture = ExtResource("3_6q350")
+offset_left = -1151.0
+offset_top = -383.0
+offset_right = 129.0
+offset_bottom = 337.0
+texture = ExtResource("31_4hpl8")
 
 [node name="Area2D" type="Area2D" parent="room1/door"]
 
@@ -457,6 +551,7 @@ position = Vector2(3.5, -45.5)
 shape = SubResource("RectangleShape2D_dx6mg")
 
 [node name="room2" type="Node2D" parent="."]
+visible = false
 
 [node name="TextureRect" type="TextureRect" parent="room2"]
 offset_right = 40.0
@@ -642,6 +737,51 @@ shape = SubResource("RectangleShape2D_lvb0s")
 [node name="room3" type="Node2D" parent="."]
 visible = false
 
+[node name="backgorund" type="TextureRect" parent="room3"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("33_i73e3")
+
+[node name="door" type="Node2D" parent="room3"]
+script = ExtResource("34_kognu")
+
+[node name="TextureRect" type="TextureRect" parent="room3/door"]
+offset_left = -5.0
+offset_top = 10.0
+offset_right = 1275.0
+offset_bottom = 730.0
+texture = ExtResource("31_4hpl8")
+flip_h = true
+
+[node name="Area2D" type="Area2D" parent="room3/door"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="room3/door/Area2D"]
+position = Vector2(125.029, 352.071)
+rotation = -0.0698131
+shape = SubResource("RectangleShape2D_i4hje")
+
+[node name="scroll" type="Node2D" parent="room3"]
+position = Vector2(811, 298)
+rotation = 0.427606
+script = ExtResource("35_66ar2")
+
+[node name="TextureRect" type="TextureRect" parent="room3/scroll"]
+offset_left = -55.0833
+offset_top = -48.5266
+offset_right = 199.917
+offset_bottom = 64.4734
+texture = ExtResource("36_hoel8")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Area2D" type="Area2D" parent="room3/scroll"]
+position = Vector2(112.091, 118.155)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="room3/scroll/Area2D"]
+position = Vector2(-112.644, -114.732)
+rotation = -0.459022
+shape = SubResource("RectangleShape2D_e7o3b")
+
 [node name="inventory" type="Node2D" parent="."]
 script = ExtResource("10_v5uqr")
 
@@ -656,107 +796,105 @@ offset_bottom = 29.0
 texture = ExtResource("11_lww6h")
 
 [node name="room1_scroll1" type="Node2D" parent="inventory"]
-visible = false
+position = Vector2(161, 664)
 
 [node name="TextureRect" type="TextureRect" parent="inventory/room1_scroll1"]
-offset_left = 173.0
-offset_top = 585.0
-offset_right = 273.0
-offset_bottom = 785.0
-texture = ExtResource("4_t4m3y")
+offset_left = -67.0
+offset_top = -61.0
+offset_right = 62.0
+offset_bottom = 157.0
+texture = ExtResource("36_hoel8")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="salt" type="Node2D" parent="inventory"]
-visible = false
-position = Vector2(340, 644)
+position = Vector2(296.55, 667.135)
 
 [node name="TextureRect" type="TextureRect" parent="inventory/salt"]
-offset_left = -52.0
-offset_top = -24.0
-offset_right = 43.0
-offset_bottom = 39.0
-texture = ExtResource("4_t4m3y")
+offset_left = -97.55
+offset_top = -146.135
+offset_right = 305.45
+offset_bottom = 80.865
+texture = ExtResource("16_6ngg7")
 expand_mode = 1
+stretch_mode = 4
 
-[node name="room1_scroll2_floor" type="Node2D" parent="inventory"]
-visible = false
+[node name="room1_scroll2_floor_shelf" type="Node2D" parent="inventory"]
+position = Vector2(390, 660)
+rotation = -0.856957
 
-[node name="floor" type="TextureRect" parent="inventory/room1_scroll2_floor"]
-offset_left = 324.0
-offset_top = 680.0
-offset_right = 424.0
-offset_bottom = 880.0
-texture = ExtResource("4_t4m3y")
-
-[node name="room1_scroll2_shelf" type="Node2D" parent="inventory"]
-visible = false
-
-[node name="shelf" type="TextureRect" parent="inventory/room1_scroll2_shelf"]
-offset_left = 321.0
-offset_top = 640.0
-offset_right = 421.0
-offset_bottom = 690.0
-texture = ExtResource("4_t4m3y")
+[node name="floor" type="TextureRect" parent="inventory/room1_scroll2_floor_shelf"]
+offset_left = -71.3717
+offset_top = -62.5386
+offset_right = 65.6283
+offset_bottom = 155.461
+texture = ExtResource("36_hoel8")
 expand_mode = 1
+stretch_mode = 4
 
 [node name="frank" type="Node2D" parent="inventory"]
-visible = false
-position = Vector2(500, 718.285)
+position = Vector2(489.03, 672.07)
 
 [node name="TextureRect" type="TextureRect" parent="inventory/frank"]
-offset_left = -50.0
-offset_top = -62.285
-offset_right = 50.0
-offset_bottom = 137.715
-texture = ExtResource("4_t4m3y")
+offset_left = -64.03
+offset_top = -88.07
+offset_right = 78.97
+offset_bottom = 51.93
+texture = ExtResource("17_x26g0")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="beeswax" type="Node2D" parent="inventory"]
-visible = false
-position = Vector2(669, 688)
+position = Vector2(593.77, 665.59)
 
 [node name="TextureRect" type="TextureRect" parent="inventory/beeswax"]
-offset_left = -17.0
-offset_top = -26.0
-offset_right = 83.0
-offset_bottom = 174.0
-texture = ExtResource("4_t4m3y")
+offset_left = -77.77
+offset_top = -98.59
+offset_right = 99.23
+offset_bottom = 109.41
+texture = ExtResource("18_wpjou")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="linen" type="Node2D" parent="inventory"]
-visible = false
-position = Vector2(876, 676)
+position = Vector2(675.835, 658.31)
 
 [node name="TextureRect" type="TextureRect" parent="inventory/linen"]
-offset_left = -5.0
-offset_top = -26.0
-offset_right = 95.0
-offset_bottom = 174.0
-texture = ExtResource("4_t4m3y")
+offset_left = -95.835
+offset_top = -264.31
+offset_right = 1323.17
+offset_bottom = 430.69
+texture = ExtResource("14_uysmk")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="key" type="Node2D" parent="inventory"]
-visible = false
-position = Vector2(947, 659)
+position = Vector2(763.51, 669.925)
 
 [node name="TextureRect" type="TextureRect" parent="inventory/key"]
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("4_t4m3y")
+offset_left = -59.51
+offset_top = -68.925
+offset_right = 103.49
+offset_bottom = 64.075
+texture = ExtResource("30_8xal5")
 expand_mode = 1
+stretch_mode = 4
 
 [node name="room2_scroll" type="Node2D" parent="inventory"]
-visible = false
-position = Vector2(915, 653)
+position = Vector2(837.82, 653)
 rotation = -1.20602
-scale = Vector2(0.05, 0.05)
 
 [node name="TextureRect" type="TextureRect" parent="inventory/room2_scroll"]
-offset_left = -1112.0
-offset_top = -905.0
-offset_right = 936.0
-offset_bottom = 1143.0
+offset_left = -71.941
+offset_top = -62.2518
+offset_right = 60.059
+offset_bottom = 107.748
 texture = ExtResource("17_bpf3e")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="cheat" type="Node2D" parent="inventory"]
-visible = false
-position = Vector2(838, 654)
+position = Vector2(914.495, 642.73)
 rotation = 1.5708
 
 [node name="TextureRect" type="TextureRect" parent="inventory/cheat"]
@@ -769,26 +907,51 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="r2Key" type="Node2D" parent="inventory"]
-visible = false
+position = Vector2(974.18, 655)
 
 [node name="TextureRect" type="TextureRect" parent="inventory/r2Key"]
-offset_left = 708.0
-offset_top = 586.0
-offset_right = 862.0
-offset_bottom = 780.0
+offset_left = -69.18
+offset_top = -81.0
+offset_right = 84.82
+offset_bottom = 113.0
 texture = ExtResource("30_8xal5")
 expand_mode = 1
 stretch_mode = 4
 
 [node name="feather" type="Node2D" parent="inventory"]
-visible = false
+position = Vector2(1050, 643)
 
 [node name="TextureRect" type="TextureRect" parent="inventory/feather"]
-offset_left = 192.0
-offset_top = 576.0
-offset_right = 346.0
-offset_bottom = 732.0
+offset_left = -72.0
+offset_top = -72.0
+offset_right = 82.0
+offset_bottom = 84.0
 texture = ExtResource("34_srims")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="scroll1_rm3" type="Node2D" parent="inventory"]
+position = Vector2(1126.57, 654.31)
+rotation = -0.645772
+
+[node name="TextureRect" type="TextureRect" parent="inventory/scroll1_rm3"]
+offset_left = -64.0
+offset_top = -59.0
+offset_right = 60.0
+offset_bottom = 69.0
+texture = ExtResource("36_hoel8")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="scroll2_rm3" type="Node2D" parent="inventory"]
+position = Vector2(1216, 660)
+
+[node name="TextureRect" type="TextureRect" parent="inventory/scroll2_rm3"]
+offset_left = -54.0
+offset_top = -42.0
+offset_right = 44.0
+offset_bottom = 53.0
+texture = ExtResource("36_hoel8")
 expand_mode = 1
 stretch_mode = 4
 
@@ -832,3 +995,7 @@ stretch_mode = 4
 [connection signal="mouse_exited" from="room2/door1/Area2D" to="room2/door1" method="_on_area_2d_mouse_exited"]
 [connection signal="mouse_entered" from="room2/door2/Area2D" to="room2/door2" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="room2/door2/Area2D" to="room2/door2" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="room3/door/Area2D" to="room3/door" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="room3/door/Area2D" to="room3/door" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="room3/scroll/Area2D" to="room3/scroll" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="room3/scroll/Area2D" to="room3/scroll" method="_on_area_2d_mouse_exited"]

@@ -44,9 +44,9 @@ func _input(event):
 				inventory.inv[0].scale.x = 1.2
 				inventory.inv[0].scale.y = 1.2
 				inventory.i = 0
-				Global.stachue3 = "salt"
+				Global.stachue1 = "salt"
 			#frank bee lin
-			elif(inventory.i == 5):
+			elif(inventory.i == 4):
 				frank_tex.visible = true
 				frank.visible = false
 				inventory.inv[5].scale.x = 1
@@ -54,8 +54,8 @@ func _input(event):
 				inventory.inv[0].scale.x = 1.2
 				inventory.inv[0].scale.y = 1.2
 				inventory.i = 0
-				Global.stachue3 = "frank"
-			elif(inventory.i == 6):
+				Global.stachue1 = "frank"
+			elif(inventory.i == 5):
 				bee_tex.visible = true
 				beeswax.visible = false
 				inventory.inv[6].scale.x = 1
@@ -63,8 +63,8 @@ func _input(event):
 				inventory.inv[0].scale.x = 1.2
 				inventory.inv[0].scale.y = 1.2
 				inventory.i = 0
-				Global.stachue3 = "beeswax"
-			elif(inventory.i == 7):
+				Global.stachue1 = "beeswax"
+			elif(inventory.i == 6):
 				linen_tex.visible = true
 				linen.visible = false
 				inventory.inv[7].scale.x = 1
@@ -72,7 +72,7 @@ func _input(event):
 				inventory.inv[0].scale.x = 1.2
 				inventory.inv[0].scale.y = 1.2
 				inventory.i = 0
-				Global.stachue3 = "linen"
+				Global.stachue1 = "linen"
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass

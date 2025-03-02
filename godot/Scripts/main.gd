@@ -11,11 +11,12 @@ extends Node
 
 #from floor boards
 @onready var floor_board = $room1/floor_board
-@onready var room_1_scroll_2_floor = $inventory/room1_scroll2_floor
+#@onready var room_1_scroll_2_floor = $inventory/room1_scroll2_floor
+@onready var room_1_scroll_2_floor_shelf = $inventory/room1_scroll2_floor_shelf
 
 #from shelf scroll
 @onready var shelf_scroll = $room1/shelf_scroll
-@onready var room_1_scroll_2_shelf = $inventory/room1_scroll2_shelf
+#@onready var room_1_scroll_2_shelf = $inventory/room1_scroll2_shelf
 
 #from second chest in room1
 @onready var chest_2_closed = $room1/chest2_closed
@@ -73,6 +74,12 @@ extends Node
 @onready var hyro_feather = $room2/hyro_feather
 @onready var feather = $inventory/feather
 
+#rm3 scrools
+@onready var scroll_1_rm_3 = $inventory/scroll1_rm3
+@onready var scroll_2_rm_3 = $inventory/scroll2_rm3
+@onready var scroll_rm_3 = $room3/scroll
+
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -85,10 +92,12 @@ func _ready():
 		salt_inv.visible = true
 	if(Global.room1_has_floor_scroll):
 		floor_board.visible = false
-		room_1_scroll_2_floor.visible = true
+		#room_1_scroll_2_floor.visible = true
+		room_1_scroll_2_floor_shelf.visible = true
 	if(Global.room1_has_shelf_scroll):
 		shelf_scroll.visible = false
-		room_1_scroll_2_shelf.visible = true
+		#room_1_scroll_2_shelf.visible = true
+		room_1_scroll_2_floor_shelf.visible = true
 	if(Global.has_frank):
 		chest_2_closed.visible = false
 		chest_2_open.visible = true
@@ -126,9 +135,15 @@ func _ready():
 		hyro_2.visible = false
 		hyro_3.visible = false
 		r_2_key.visible = true
+	if(Global.unlock_door2):
+		r_2_key.visible = false
 	if(Global.has_feather):
 		hyro_feather.visible = false
 		feather.visible = true
+	if(Global.has_rm3_scrolls):
+		scroll_rm_3.visible = false
+		scroll_1_rm_3.visible = true
+		scroll_2_rm_3.visible = true
 		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
