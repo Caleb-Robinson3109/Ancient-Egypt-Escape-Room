@@ -17,3 +17,13 @@ var stachue4: String = ""
 var complete_stat = false
 var has_skey = false
 var unlock_door = false
+var has_scroll_1_room2 = false
+var cracked_vase = false
+var has_cheat_cheat = false
+
+var has_hyro1 = false
+var has_hyro2 = false
+var has_hyro3 = false
+var has_hyro_key = false
+var has_feather = false
+var unlock_door2 = false

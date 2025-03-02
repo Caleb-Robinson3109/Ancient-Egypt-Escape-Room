@@ -44,6 +44,36 @@ extends Node
 #unlocked door
 #skey
 
+#gets first scroll room 2
+@onready var r2_scroll_1 = $room2/scroll1
+@onready var room_2_scroll = $inventory/room2_scroll
+
+#cracked vase
+@onready var crack_2 = $room2/vase/crack2
+@onready var cheat = $room2/vase/cheat
+
+
+#picked up cheat cheat
+#cheat
+@onready var cheat_inv = $inventory/cheat
+
+#hyro1
+@onready var hyro_1 = $room2/hyro1
+
+#hyro2
+@onready var hyro_2 = $room2/hyro2
+
+#hyro3
+@onready var hyro_3 = $room2/hyro3
+
+#r2key
+@onready var r_2_key = $inventory/r2Key
+
+#feather_hyro
+@onready var hyro_feather = $room2/hyro_feather
+@onready var feather = $inventory/feather
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if(Global.room1_has_scroll1):
@@ -76,6 +106,29 @@ func _ready():
 		scarcoph_key.visible = false
 	if(Global.unlock_door):
 		skey.visible = false
+	if(Global.has_scroll_1_room2):
+		r2_scroll_1.visible = false
+		room_2_scroll.visible = true
+	if(Global.cracked_vase):
+		crack_2.visible
+		cheat.visible = true
+	if(Global.has_cheat_cheat):
+		cheat.visible = false
+		cheat_inv = true
+	if(Global.has_hyro1):
+		hyro_1.visible = false
+	if(Global.has_hyro2):
+		hyro_2.visible = false
+	if(Global.has_hyro3):
+		hyro_3.visible = false
+	if(Global.has_hyro_key):
+		hyro_1.visible = false
+		hyro_2.visible = false
+		hyro_3.visible = false
+		r_2_key.visible = true
+	if(Global.has_feather):
+		hyro_feather.visible = false
+		feather.visible = true
 		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
