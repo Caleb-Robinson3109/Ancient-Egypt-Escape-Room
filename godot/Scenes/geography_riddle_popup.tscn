@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://oij8o2ur0klg"]
+
+[ext_resource type="Texture2D" uid="uid://k10t235vcs6d" path="res://Assets/Room3/geography riddle.png" id="1_cdswu"]
+
+[node name="geography riddle popup" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_cdswu")

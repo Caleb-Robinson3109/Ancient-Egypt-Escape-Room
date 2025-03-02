@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://uymgvol1y4gq"]
+
+[ext_resource type="Texture2D" uid="uid://dng8d35tc3ahi" path="res://Assets/Room1/Anubis Riddle.png" id="1_3vmko"]
+
+[node name="Anubus riddle lock" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_3vmko")

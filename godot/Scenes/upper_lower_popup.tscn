@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfvyjbsrjgv2h"]
+
+[ext_resource type="Texture2D" uid="uid://c58jtv8y1fn3f" path="res://Assets/Room3/IMG_2127.jpeg" id="1_oogwg"]
+
+[node name="upper_lower popup" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1281.0
+offset_bottom = 722.0
+texture = ExtResource("1_oogwg")
+expand_mode = 1
+stretch_mode = 4

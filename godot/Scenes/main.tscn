@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=3 uid="uid://baduux6f02c46"]
+[gd_scene load_steps=73 format=3 uid="uid://baduux6f02c46"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_2w4k7"]
 [ext_resource type="Script" path="res://Scripts/room1_scroll1.gd" id="2_4bmf5"]
@@ -34,6 +34,7 @@
 [ext_resource type="Texture2D" uid="uid://qn71ntuatutn" path="res://Assets/Room2/Untitled_Artwork 17.png" id="22_8bjgn"]
 [ext_resource type="Texture2D" uid="uid://de1fnhi2fotvf" path="res://Assets/Room1/Untitled_Artwork 10.png" id="22_8tyrj"]
 [ext_resource type="Script" path="res://Scripts/hyro1.gd" id="22_k0um7"]
+[ext_resource type="Texture2D" uid="uid://ptui7qpspsc4" path="res://Assets/Room1/IMG_2130.png" id="23_hqll3"]
 [ext_resource type="Texture2D" uid="uid://cou6m2rhr0pa7" path="res://Assets/Room2/Untitled_Artwork 19.png" id="23_ksv1p"]
 [ext_resource type="Texture2D" uid="uid://bkqsu5i712556" path="res://Assets/Room2/Untitled_Artwork 18.png" id="24_ndv13"]
 [ext_resource type="Script" path="res://Scripts/hyro2.gd" id="24_yg267"]
@@ -505,15 +506,16 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="scarcoph_open" type="Node2D" parent="room1"]
-visible = false
 position = Vector2(659, 348)
 
 [node name="TextureRect" type="TextureRect" parent="room1/scarcoph_open"]
-offset_left = -93.0
-offset_top = -309.0
-offset_right = 44.0
-offset_bottom = 154.0
-texture = ExtResource("3_6q350")
+offset_left = -385.0
+offset_top = -369.0
+offset_right = 336.0
+offset_bottom = 661.0
+texture = ExtResource("23_hqll3")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="scarcoph_key" type="Node2D" parent="room1"]
 visible = false
@@ -578,7 +580,6 @@ metadata/_edit_use_anchors_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="room2/scroll1/Area2D"]
 position = Vector2(51.2121, 85.7274)
 rotation = -0.326377
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_nwkah")
 
 [node name="vase" type="Node2D" parent="room2"]
@@ -658,7 +659,6 @@ stretch_mode = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="room2/hyro2/Area2D"]
 position = Vector2(1.61295, -0.733131)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_gr42l")
 
 [node name="hyro3" type="Node2D" parent="room2"]

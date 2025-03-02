@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfc7jui1spck"]
+
+[ext_resource type="Texture2D" uid="uid://cmt0hmo0tgk00" path="res://Assets/Room3/IMG_2128.jpeg" id="1_wipj8"]
+
+[node name="nile popup" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1272.0
+offset_bottom = 735.0
+texture = ExtResource("1_wipj8")
+expand_mode = 1
+stretch_mode = 4

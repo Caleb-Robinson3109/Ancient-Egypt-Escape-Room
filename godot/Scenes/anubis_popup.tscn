@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://rj7mry01je5g"]
+
+[ext_resource type="Texture2D" uid="uid://glsq0o3uyiwn" path="res://Assets/Room1/anubis details.png" id="1_nnpcb"]
+
+[node name="Anubis popup" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_nnpcb")
