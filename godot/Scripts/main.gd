@@ -149,8 +149,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if(Global.complete_stat == false):
-		#if(Global.stachue1 == "salt" && Global.stachue2 == "linen" && Global.stachue3 == "beeswax" && Global.stachue4 == "frank"):
-		if(true):
+		if(Global.stachue1 == "salt" && Global.stachue2 == "linen" && Global.stachue3 == "beeswax" && Global.stachue4 == "frank"):
+		#if(true):
 			Global.complete_stat = true
 			scarcoph_closed.visible = false
 			scarcoph_open.visible = true

@@ -24,22 +24,27 @@ func _input(event):
 			if(inventory.i == 0):
 				if(Global.stachue1 == ""):
 					pass
+					#read the thing
 				else:
 					if(Global.stachue1 == "salt"):
 						salt_tex.visible = false
 						salt_inv.visible = true
+						Global.stachue1 = ""
 					elif(Global.stachue1 == "frank"):
 						frank_tex.visible = false
 						frank.visible = true
+						Global.stachue1 = ""
 					elif(Global.stachue1 == "beeswax"):
 						bee_tex.visible = false
 						beeswax.visible = true
+						Global.stachue1 = ""
 					elif(Global.stachue1 == "linen"):
 						linen_tex.visible = false
 						linen.visible = true
+						Global.stachue1 = ""
 			elif(Global.stachue1 == ""):
 				#salt
-				elif(inventory.i == 2):
+				if(inventory.i == 2):
 					salt_tex.visible = true
 					salt_inv.visible = false
 					inventory.inv[2].scale.x = 1

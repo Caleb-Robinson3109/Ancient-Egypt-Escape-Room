@@ -1,6 +1,6 @@
 extends Node2D
 @onready var shelf_scroll = $"."
-@onready var inv = $"../../inventory/room1_scroll2_shelf"
+@onready var inv = $"../../inventory/room1_scroll2_floor_shelf"
 
 @export var mouse: bool = false
 var bigger: bool = true

@@ -1,9 +1,8 @@
-[gd_scene load_steps=73 format=3 uid="uid://baduux6f02c46"]
+[gd_scene load_steps=72 format=3 uid="uid://baduux6f02c46"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_2w4k7"]
 [ext_resource type="Script" path="res://Scripts/room1_scroll1.gd" id="2_4bmf5"]
 [ext_resource type="Texture2D" uid="uid://dvp40pdsimxul" path="res://Assets/Room1/Room 1 Background.jpg" id="2_6g7cp"]
-[ext_resource type="Texture2D" uid="uid://dvgkvrmhk620h" path="res://Assets/Other Assets/test.png" id="3_6q350"]
 [ext_resource type="Script" path="res://Scripts/chest1_room1.gd" id="4_q64sd"]
 [ext_resource type="Texture2D" uid="uid://bbqrc1j28sgcl" path="res://Assets/Room1/Untitled_Artwork 11.png" id="6_ielpt"]
 [ext_resource type="Script" path="res://Scripts/floor_board.gd" id="6_jjws6"]
@@ -34,7 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://qn71ntuatutn" path="res://Assets/Room2/Untitled_Artwork 17.png" id="22_8bjgn"]
 [ext_resource type="Texture2D" uid="uid://de1fnhi2fotvf" path="res://Assets/Room1/Untitled_Artwork 10.png" id="22_8tyrj"]
 [ext_resource type="Script" path="res://Scripts/hyro1.gd" id="22_k0um7"]
-[ext_resource type="Texture2D" uid="uid://ptui7qpspsc4" path="res://Assets/Room1/IMG_2130.png" id="23_hqll3"]
+[ext_resource type="Texture2D" uid="uid://dawc1dd8m4vxe" path="res://Assets/Room1/IMG_2130.png" id="23_hqll3"]
 [ext_resource type="Texture2D" uid="uid://cou6m2rhr0pa7" path="res://Assets/Room2/Untitled_Artwork 19.png" id="23_ksv1p"]
 [ext_resource type="Texture2D" uid="uid://bkqsu5i712556" path="res://Assets/Room2/Untitled_Artwork 18.png" id="24_ndv13"]
 [ext_resource type="Script" path="res://Scripts/hyro2.gd" id="24_yg267"]
@@ -122,6 +121,7 @@ size = Vector2(133.379, 46.396)
 script = ExtResource("1_2w4k7")
 
 [node name="room1" type="Node2D" parent="."]
+visible = false
 position = Vector2(0, -1)
 
 [node name="background" type="TextureRect" parent="room1"]
@@ -295,7 +295,6 @@ shape = SubResource("RectangleShape2D_cucog")
 [node name="stat1" type="Node2D" parent="room1"]
 position = Vector2(298, 226)
 script = ExtResource("10_2pgfc")
-mouse = null
 
 [node name="salt" type="TextureRect" parent="room1/stat1"]
 visible = false
@@ -400,7 +399,7 @@ script = ExtResource("12_tf8ql")
 [node name="Area2D" type="Area2D" parent="room1/stat3"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="room1/stat3/Area2D"]
-position = Vector2(-11, 8)
+position = Vector2(-152, 8)
 shape = SubResource("RectangleShape2D_sgp0k")
 
 [node name="salt" type="TextureRect" parent="room1/stat3"]
@@ -446,12 +445,11 @@ stretch_mode = 4
 [node name="stat4" type="Node2D" parent="room1"]
 position = Vector2(819, 243)
 script = ExtResource("13_wewro")
-mouse = null
 
 [node name="Area2D" type="Area2D" parent="room1/stat4"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="room1/stat4/Area2D"]
-position = Vector2(-8, -3)
+position = Vector2(135, -6)
 shape = SubResource("RectangleShape2D_b2f0l")
 
 [node name="salt" type="TextureRect" parent="room1/stat4"]
@@ -506,6 +504,7 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="scarcoph_open" type="Node2D" parent="room1"]
+visible = false
 position = Vector2(659, 348)
 
 [node name="TextureRect" type="TextureRect" parent="room1/scarcoph_open"]
@@ -519,15 +518,17 @@ stretch_mode = 4
 
 [node name="scarcoph_key" type="Node2D" parent="room1"]
 visible = false
-position = Vector2(640, 372)
+position = Vector2(630.975, 372)
 script = ExtResource("14_u7ex4")
 
 [node name="TextureRect" type="TextureRect" parent="room1/scarcoph_key"]
-offset_left = 12.0
-offset_top = -19.0
-offset_right = 69.0
-offset_bottom = 26.0
-texture = ExtResource("3_6q350")
+offset_left = -100.0
+offset_top = -55.0
+offset_right = 221.0
+offset_bottom = 172.0
+texture = ExtResource("30_8xal5")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="Area2D" type="Area2D" parent="room1/scarcoph_key"]
 
@@ -607,6 +608,7 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="cheat" type="TextureRect" parent="room2/vase"]
+visible = false
 offset_left = -87.0
 offset_top = -22.0
 offset_right = 220.0
@@ -735,7 +737,6 @@ rotation = 0.0698131
 shape = SubResource("RectangleShape2D_lvb0s")
 
 [node name="room3" type="Node2D" parent="."]
-visible = false
 
 [node name="backgorund" type="TextureRect" parent="room3"]
 offset_right = 40.0
@@ -782,6 +783,13 @@ position = Vector2(-112.644, -114.732)
 rotation = -0.459022
 shape = SubResource("RectangleShape2D_e7o3b")
 
+[node name="Button" type="Button" parent="room3"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 63.0
+offset_top = 110.0
+offset_right = 190.0
+offset_bottom = 601.0
+
 [node name="inventory" type="Node2D" parent="."]
 script = ExtResource("10_v5uqr")
 
@@ -796,6 +804,7 @@ offset_bottom = 29.0
 texture = ExtResource("11_lww6h")
 
 [node name="room1_scroll1" type="Node2D" parent="inventory"]
+visible = false
 position = Vector2(161, 664)
 
 [node name="TextureRect" type="TextureRect" parent="inventory/room1_scroll1"]
@@ -808,6 +817,7 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="salt" type="Node2D" parent="inventory"]
+visible = false
 position = Vector2(296.55, 667.135)
 
 [node name="TextureRect" type="TextureRect" parent="inventory/salt"]
@@ -820,6 +830,7 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="room1_scroll2_floor_shelf" type="Node2D" parent="inventory"]
+visible = false
 position = Vector2(390, 660)
 rotation = -0.856957
 
@@ -833,6 +844,7 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="frank" type="Node2D" parent="inventory"]
+visible = false
 position = Vector2(489.03, 672.07)
 
 [node name="TextureRect" type="TextureRect" parent="inventory/frank"]
@@ -845,6 +857,7 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="beeswax" type="Node2D" parent="inventory"]
+visible = false
 position = Vector2(593.77, 665.59)
 
 [node name="TextureRect" type="TextureRect" parent="inventory/beeswax"]
@@ -857,6 +870,7 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="linen" type="Node2D" parent="inventory"]
+visible = false
 position = Vector2(675.835, 658.31)
 
 [node name="TextureRect" type="TextureRect" parent="inventory/linen"]
@@ -869,6 +883,7 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="key" type="Node2D" parent="inventory"]
+visible = false
 position = Vector2(763.51, 669.925)
 
 [node name="TextureRect" type="TextureRect" parent="inventory/key"]
@@ -881,6 +896,7 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="room2_scroll" type="Node2D" parent="inventory"]
+visible = false
 position = Vector2(837.82, 653)
 rotation = -1.20602
 
@@ -894,6 +910,7 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="cheat" type="Node2D" parent="inventory"]
+visible = false
 position = Vector2(914.495, 642.73)
 rotation = 1.5708
 
@@ -907,6 +924,7 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="r2Key" type="Node2D" parent="inventory"]
+visible = false
 position = Vector2(974.18, 655)
 
 [node name="TextureRect" type="TextureRect" parent="inventory/r2Key"]
@@ -919,6 +937,7 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="feather" type="Node2D" parent="inventory"]
+visible = false
 position = Vector2(1050, 643)
 
 [node name="TextureRect" type="TextureRect" parent="inventory/feather"]
@@ -931,6 +950,7 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="scroll1_rm3" type="Node2D" parent="inventory"]
+visible = false
 position = Vector2(1126.57, 654.31)
 rotation = -0.645772
 
@@ -944,6 +964,7 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="scroll2_rm3" type="Node2D" parent="inventory"]
+visible = false
 position = Vector2(1216, 660)
 
 [node name="TextureRect" type="TextureRect" parent="inventory/scroll2_rm3"]
@@ -999,3 +1020,4 @@ stretch_mode = 4
 [connection signal="mouse_exited" from="room3/door/Area2D" to="room3/door" method="_on_area_2d_mouse_exited"]
 [connection signal="mouse_entered" from="room3/scroll/Area2D" to="room3/scroll" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="room3/scroll/Area2D" to="room3/scroll" method="_on_area_2d_mouse_exited"]
+[connection signal="pressed" from="room3/Button" to="room3/door" method="_on_button_pressed"]
