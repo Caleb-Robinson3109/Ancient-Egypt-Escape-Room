@@ -4,6 +4,7 @@ extends Node2D
 @onready var scroll_2_rm_3 = $"../../inventory/scroll2_rm3"
 @export var mouse: bool = false
 var bigger: bool = true
+@onready var paper = $"../../paper"
 
 
 # Called when the node enters the scene tree for the first time.
@@ -16,6 +17,7 @@ func _input(event):
 			scroll.visible = false
 			scroll_1_rm_3.visible = true
 			scroll_2_rm_3.visible = true
+			paper.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

@@ -1,5 +1,6 @@
 extends Node2D
 
+
 @onready var a = $hand
 @onready var b = $room1_scroll1
 @onready var c = $salt

@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cc1f610dilsa0"]
+[gd_scene load_steps=3 format=3 uid="uid://cc1f610dilsa0"]
 
 [ext_resource type="Texture2D" uid="uid://c62q8rmxufnd3" path="res://Assets/Other Assets/You win!.png" id="1_j16ro"]
+[ext_resource type="AudioStream" uid="uid://crfnrn3bgly70" path="res://Sounds/win.wav" id="2_453p3"]
 
 [node name="win" type="Node2D"]
 
@@ -8,3 +9,7 @@
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_j16ro")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_453p3")
+autoplay = true

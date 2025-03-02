@@ -3,6 +3,8 @@ extends Node2D
 @onready var crack_2 = $crack2
 @onready var cheat = $cheat
 @onready var inv = $"../../inventory/cheat"
+@onready var shart = $"../../shart"
+@onready var paper = $"../../paper"
 
 @export var mouse: bool = false
 var bigger: bool = true
@@ -23,17 +25,22 @@ func _input(event):
 			if(crack == 0):
 				crack = 1
 				crack_1.visible = true
+				shart.play()
 			elif(crack == 1):
 				crack = 2
 				crack_2.visible = true
+				shart.play()
 			elif(crack == 2):
 				crack = 3
 				cheat.visible = true
 				Global.cracked_vase = true
+				shart.play()
 			else:
 				inv.visible = true
 				cheat.visible = false
 				Global.has_cheat_cheat = true
+				paper.play()
+				
 func _on_area_2d_mouse_entered():
 	mouse = true
 

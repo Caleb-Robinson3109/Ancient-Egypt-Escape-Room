@@ -5,6 +5,7 @@ extends Node2D
 @onready var crack_3 = $crack3
 @onready var inv = $"../../inventory/room1_scroll2_floor_shelf"
 @onready var heart = $"../../inventory/heart"
+@onready var paper = $"../../paper"
 
 var crack: int = 0
 @export var mouse: bool = false
@@ -32,6 +33,7 @@ func _input(event):
 					Global.room1_has_both_scroll_parts = true
 				inv.visible = true
 				floor_board.visible = false
+				paper.play()
 			
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

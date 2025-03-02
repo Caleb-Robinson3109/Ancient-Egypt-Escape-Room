@@ -4,6 +4,8 @@ extends Node2D
 @onready var crack_2 = $crack2
 @onready var heart = $heart
 @onready var inv = $"../../inventory/heart"
+@onready var shart = $"../../shart"
+
 
 var crack = 0
 
@@ -22,11 +24,13 @@ func _on_button_pressed():
 		crack = 1
 		crack_0.visible = false
 		crack_1.visible = true
+		shart.play()
 	elif(crack == 1):
 		crack = 2
 		crack_1.visible = false
 		crack_2.visible = true
 		heart.visible = true
+		shart.play()
 	else:
 		Global.has_heart = true
 		inv.visible = true

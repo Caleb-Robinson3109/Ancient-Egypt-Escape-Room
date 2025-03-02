@@ -1,9 +1,12 @@
-[gd_scene load_steps=79 format=3 uid="uid://baduux6f02c46"]
+[gd_scene load_steps=82 format=3 uid="uid://baduux6f02c46"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_2w4k7"]
 [ext_resource type="Script" path="res://Scripts/room1_scroll1.gd" id="2_4bmf5"]
 [ext_resource type="Texture2D" uid="uid://dvp40pdsimxul" path="res://Assets/Room1/Room 1 Background.jpg" id="2_6g7cp"]
+[ext_resource type="AudioStream" uid="uid://j7b7m3isn7gq" path="res://Sounds/paper.mp3" id="2_dr2v8"]
+[ext_resource type="AudioStream" uid="uid://14tlktdjlw28" path="res://Sounds/clay.mp3" id="3_w5pvr"]
 [ext_resource type="Script" path="res://Scripts/chest1_room1.gd" id="4_q64sd"]
+[ext_resource type="AudioStream" uid="uid://cjjtwa8w7ak50" path="res://Sounds/key.wav" id="4_qv1g3"]
 [ext_resource type="Texture2D" uid="uid://bbqrc1j28sgcl" path="res://Assets/Room1/Untitled_Artwork 11.png" id="6_ielpt"]
 [ext_resource type="Script" path="res://Scripts/floor_board.gd" id="6_jjws6"]
 [ext_resource type="Texture2D" uid="uid://bdu2yrphmcsky" path="res://Assets/Room1/Untitled_Artwork 12.png" id="7_jnpyh"]
@@ -126,6 +129,17 @@ size = Vector2(133.379, 46.396)
 
 [node name="main" type="Node"]
 script = ExtResource("1_2w4k7")
+
+[node name="paper" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_dr2v8")
+volume_db = -4.0
+
+[node name="shart" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_w5pvr")
+volume_db = 3.0
+
+[node name="key" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_qv1g3")
 
 [node name="room1" type="Node2D" parent="."]
 position = Vector2(0, -1)

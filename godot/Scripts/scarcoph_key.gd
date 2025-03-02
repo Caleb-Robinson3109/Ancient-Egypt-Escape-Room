@@ -3,6 +3,7 @@ extends Node2D
 @onready var inv = $"../../inventory/key"
 @export var mouse: bool = false
 var bigger: bool = true
+@onready var key = $"../../key"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,6 +15,7 @@ func _input(event):
 			Global.has_skey = true
 			skey.visible = false
 			inv.visible = true
+			key.play()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass

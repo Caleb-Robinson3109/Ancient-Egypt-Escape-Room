@@ -1,6 +1,7 @@
 extends Node2D
 @onready var shelf_scroll = $"."
 @onready var inv = $"../../inventory/room1_scroll2_floor_shelf"
+@onready var paper = $"../../paper"
 
 @export var mouse: bool = false
 var bigger: bool = true
@@ -18,6 +19,7 @@ func _input(event):
 				Global.room1_has_both_scroll_parts = true
 			shelf_scroll.visible = false
 			inv.visible = true
+			paper.play()
 			
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

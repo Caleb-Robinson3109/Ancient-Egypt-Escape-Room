@@ -4,6 +4,7 @@ extends Node2D
 @onready var line_edit_ciro = $LineEdit_ciro
 
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.

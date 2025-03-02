@@ -3,6 +3,7 @@ extends Node2D
 @onready var r_2_key = $"../../inventory/r2Key"
 @export var mouse: bool = false
 var bigger: bool = true
+@onready var key = $"../../key"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,6 +17,7 @@ func _input(event):
 			if(Global.has_hyro1 && Global.has_hyro2 && Global.has_hyro3):
 				Global.has_hyro_key = true
 				r_2_key.visible = true
+				key.play()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass

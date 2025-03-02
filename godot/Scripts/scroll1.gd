@@ -1,6 +1,7 @@
 extends Node2D
 @onready var scroll_1 = $"."
 @onready var inv = $"../../inventory/room2_scroll"
+@onready var paper = $"../../paper"
 
 
 @export var mouse: bool = false
@@ -16,6 +17,7 @@ func _input(event):
 			Global.has_scroll_1_room2 = true
 			scroll_1.visible = false
 			inv.visible = true
+			paper.play()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if(mouse):
